@@ -1,0 +1,15 @@
+﻿/* website    : 0750团购网 0750.tuanzhang.cc
+   author     : 林嘉文 Gavin Lin
+   creatTime  : 04.14 2014
+   saveFrom   : ip-42.121.84.115
+   @face-color: #2aa143,#1f9537,#555
+   @face-style: list_custom_* | 旧版重用 MODs
+ */
+.c_diyPage ,.c_travelPage{background:#fff url(img/diyshopbg.gif) top center no-repeat; width:100%; border-top:none;}
+.c_travelPage{background:url(img/travelbg.jpg) top center no-repeat;}
+.c_diyPage .c_diy ,.c_diy .c_diy_banner ,.c_travelPage .c_travel ,.c_travel .c_travel_banner{width:1100px;}
+.c_diy .c_diy_banner{background:url(img/diyshop1100.jpg) no-repeat; height:365px;}
+.c_travel .c_travel_banner{height:288px;}
+.c_diy .t ,.c_travel .t{font-size:24px; padding-bottom:15px; border-bottom:2px solid #dc3c62; color:#dc3c62; font-weight:bold; display:inline; margin-bottom:15px; float:left; width:1100px; margin-top:25px;}
+.c_travel .t{border-bottom:2px solid #2aa143; color:#2aa143;}
+.c_diy .nomargintop ,.c_travel .nomargintop{margin-top:0;}

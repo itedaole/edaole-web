@@ -1,0 +1,41 @@
+<div id="order-pay-dialog" class="order-pay-dialog-c" style="width:450px;">
+	<h3>账单详情<span id="order-pay-dialog-close" class="close" onclick="return X.boxClose();">关闭</span></h3>
+	<div style="overflow-x:hidden;padding:10px;" id="dialog-order-id" oid="{$order['id']}">
+	<table width="96%" align="center" class="coupons-table">
+		<tr><td width="80"><b>账单号：</b></td><td>{$bill['bill_sn']}</td></tr>
+		<tr><td><b>申请日期：</b></td><td>${date('Y-m-d',$bill['add_time'])}</td></tr>
+		<tr><td><b>结算日期：</b></td><td><!--{if $bill['end_time']}-->${date('Y-m-d',$bill['end_time'])}<!--{/if}--></td></tr>
+		<tr><td><b>结算金额：</b></td><td>{$bill['price']}</td></tr>
+		<tr><td><b>账单状态：</b></td><td>
+        <!--{if $bill['bill_status'] == 0}-->
+             审核中
+         <!--{elseif $bill['bill_status'] == 1}-->
+             已结算
+         <!--{else}-->
+             已拒绝
+         <!--{/if}-->
+        
+        </td></tr>
+		<tr><td><b>付款账户：</b></td><td>{$bill['bank_sn']}</td></tr>
+		<tr><td><b>开户银行：</b></td><td>{$bill['bank_name']}</td></tr>
+	    <tr><td><b>开户名字：</b></td><td>{$bill['name']}</td></tr>
+	
+         <tr><td width="80"><b>管理备注：</b></td><td><textarea id="dialog_comment_content" style="width:300px;height:80px;">${htmlspecialchars($bill['mnote'])}</textarea></td></tr>
+        
+        
+        <tr><td><b>状态：</b></td><td><select id="bill_status" name="bill_status" id="order-dialog-refund-id">${Utility::Option($option_bill, $bill['bill_status'])}</select></td></tr>
+       
+       
+       <tr><td></td><td><input type="submit" value="确定" class="formbutton" onclick="X.misc.bill();" /></td></tr>
+	</table>
+	</div>
+</div>
+
+<script type="text/javascript">
+X.misc.bill = function() {
+	 var s = jQuery('#bill_status').val();
+	 var t = jQuery('#dialog_comment_content').val();
+	 return !X.get(WEB_ROOT + '/ajax/manage.php?action=billedit&id={$bill['id']}&s='+s+'&t='+encodeURIComponent(t));
+};
+</script>
+

@@ -1,0 +1,169 @@
+<div class="head">
+ <!--{include top_bar}-->
+ <div class="inside">
+  <div class="centre">
+   <div class="logo_style">
+   </div>
+   
+   
+   <div class="clear"></div>
+   <div class="logo"><a href="/index.php">{$INI['system']['abbreviation']}团购网，最潮流的团购网</a></div>
+      <div class="search">
+      
+      <div class="select">
+<a class="tg focus" href="javascript:;">优惠</a>
+<a class="sj" href="javascript:;">商家</a>
+</div>
+
+    <div class="input">
+     <form action="/search.php" method="POST" id="search_form">
+     <div class="sp">
+      <input type="text" class="tg" name="keywords" placeholder="请输入要搜索的优惠名称" value="">
+     </div>
+     <div class="sb"><input type="submit" value="搜索"><input type="hidden" name="m" value="Goods"><input type="hidden" name="a" value="showall"></div>
+     </form>
+    </div>
+    
+    <div class="keyword">
+        <a title="搜索 LV" href="/category.php?keywords=LV">LV</a>
+        <a title="搜索 爱马仕" href="/category.php?keywords=爱马仕">爱马仕</a>
+        <a title="搜索 香奈儿" href="/category.php?keywords=香奈儿">香奈儿</a>
+        <a title="搜索 卡地亚" href="/category.php?keywords=卡地亚">卡地亚</a>
+        <a title="搜索 万宝龙" href="/category.php?keywords=万宝龙">万宝龙</a>
+        <a title="搜索 迪奥" href="/category.php?keywords=迪奥">迪奥</a>
+        <a title="搜索 Burberry" href="/category.php?keywords=Burberry">Burberry</a>
+        <a title="搜索 阿玛尼" href="/category.php?keywords=阿玛尼">阿玛尼</a>
+        <a title="搜索 Prada" href="/category.php?keywords=Prada">Prada</a>
+        <a title="搜索 宝格丽" href="/category.php?keywords=宝格丽">宝格丽</a>
+    </div>
+
+   </div>
+  <!--  <div class="code">
+        <a href="javascript:;">扫一扫下载手机端</a>
+        <p>扫一扫下载手机端</p>
+        </div>
+        <div class="code weixin">
+        <a href="javascript:;">扫二维码关注团购网微信</a>
+        <p>关注{$INI['system']['abbreviation']}团微信</p>
+        </div> -->
+
+  </div>
+ </div>
+  <div class="navigation">
+  <div class="inside">
+  
+<!--导航分类代码 -->
+<!--${
+$categorys = get_categorys();
+}--> 
+
+
+   <div class="product-type-list ptl">
+    <div class="choose"><a href="/index.php">全部分类</a></div>
+    <div class="type-list tl" style="display:none;">
+     <ul>
+     
+     
+     
+     
+     <!--{loop $categorys $index $cat}-->
+            <li class="tl${$index + 1}">
+       <div class="gt"></div>       <div class="panel">
+        <div class="ntype"><a href="/category.php?gid={$cat['id']}" class="n">{$cat['name']}</a></div>
+        <div class="nkey">
+        
+          <!--{loop $cat['fcat'] $findex $fcat}-->
+            <!--{if $findex < 3}-->
+           <a href="/category.php?gid={$cat['id']}&sid={$fcat['id']}">{$fcat['name']}</a>
+             <!--{/if}-->
+         <!--{/loop}-->
+        
+        </div>      
+        
+         </div>
+       <div class="showmenu" style="display: none;">
+        <div class="this-type-all tta">
+         <p class="t">{$cat['name']}</p>
+         <p class="ty">
+         <!--{loop $cat['fcat'] $findex $fcat}-->
+        <a href="/category.php?gid={$cat['id']}&sid={$fcat['id']}">{$fcat['name']}</a>
+         
+          <!--{/loop}-->
+         
+         </p>
+         <p class="hr"></p>                
+          </div>
+       </div>      </li>
+       <!--{/loop}-->   
+           </ul>
+    </div>
+   </div>
+   
+   
+  <script type="text/javascript">
+
+$(document).ready(function(){	  
+	  
+  $('.product-type-list').on('mouseover',function(){
+
+  $(this).find('.type-list').show();
+  
+  });
+
+  $('.product-type-list').on('mouseleave',function(){
+  
+  
+  $(this).find('.type-list').hide();
+  
+  });
+ }); 
+</script>
+   
+   
+   <div class="nav">
+    <ul>
+     <li><a href="/" class="focus">首页</a></li>
+     
+     <li class="history"><a href="javascript:;">浏览历史</a>
+      <div class="showmenu" style="display: none;">
+       <ul>
+       <!--{if $history_team}-->
+       
+        <!--{loop $history_team $index $one}-->
+              <li>
+         <div class="picture"><a href="/team.php?id={$one['id']}" target="_blank"><img src="${team_image($one['image'])}" width="65" height="41"/></a></div>
+         <div class="title"><a href="/team.php?id={$one['id']}" target="_blank" title="{$one['title']}"><span>[${get_area_name($one['area_id'])}]</span>${mb_strimwidth($one['title'],0,38,'...')}</a></div>
+         <div class="price"><b class="fee">{$currency}${moneyit($one['team_price'])}</b><b class="exfee">{$currency}${moneyit($one['market_price'])}</b></div>
+        </li>
+         <!--{/loop}-->
+         <li class="tips">
+         <a href="javascript:;" onclick="ClearHistory();">清空浏览历史</a>
+        </li>
+       <!--{else}-->
+       
+        <li class="tips">
+         尚未有浏览记录，<a href="/index.php">去逛逛</a>
+        </li>
+        <!--{/if}--> 
+        
+              </ul>
+      </div>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+ </div>
+ 
+ 
+
+ <?php if($session_notice=Session::Get('error',true)){?>
+ <div class="section" style="background:url(../static/0750/css/img/error.gif) no-repeat #FFF 12px center; text-indent:18px;margin: 0px auto; width: 1062px; padding:10px 18px; border:#ddd solid 1px;">
+       
+          <div style="color:#F00;"><?php echo $session_notice; ?></div>
+     
+ </div>     
+<?php }?>  
+
+ 
+ 

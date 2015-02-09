@@ -1,0 +1,66 @@
+.left_muen A.menuChild:link {
+	COLOR: #036; TEXT-DECORATION: none
+}
+.left_muen A.menuChild:visited {
+	COLOR: #036; TEXT-DECORATION: none
+}
+.left_muen A.menuChild:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+.left_muen A.menuParent:link {
+	COLOR: #000; TEXT-DECORATION: none
+}
+.left_muen A.menuParent:visited {
+	COLOR: #000; TEXT-DECORATION: none
+}
+.left_muen A.menuParent:hover {
+	COLOR: #f60; TEXT-DECORATION: none
+}
+.left_muen TABLE.position {
+	WIDTH: 100%
+}
+.left_muen TR.position {
+	HEIGHT: 25px; BACKGROUND-COLOR: #f4f7fc
+}
+.left_muen TD.position {
+	BORDER-RIGHT: #adceff 1px solid; PADDING-LEFT: 20px; BORDER-BOTTOM: #adceff 1px solid
+}
+.left_muen TABLE.listTable {
+	WIDTH: 98%; BACKGROUND-COLOR: #b1ceee
+}
+.left_muen TR.listHeaderTr {
+	FONT-WEIGHT: bold; HEIGHT: 25px; BACKGROUND-COLOR: #ebf4fd; TEXT-ALIGN: center
+}
+.left_muen TR.listTr {
+	HEIGHT: 25px; BACKGROUND-COLOR: #fff; TEXT-ALIGN: center
+}
+.left_muen TR.listAlternatingTr {
+	HEIGHT: 25px; BACKGROUND-COLOR: #fffdf0; TEXT-ALIGN: center
+}
+.left_muen TR.listFooterTr {
+	HEIGHT: 30px; BACKGROUND-COLOR: #ebf4fd; TEXT-ALIGN: center
+}
+.left_muen TABLE.editTable {
+	WIDTH: 98%; BACKGROUND-COLOR: #b1ceee
+}
+.left_muen TR.editHeaderTr {
+	HEIGHT: 25px; BACKGROUND-COLOR: #ebf4fd
+}
+.left_muen TD.editHeaderTd {
+	PADDING-LEFT: 50px; FONT-WEIGHT: bold
+}
+.left_muen TR.editTr {
+	HEIGHT: 30px
+}
+.left_muen TD.editLeftTd {
+	WIDTH: 150px; BACKGROUND-COLOR: #fffdf0; TEXT-ALIGN: center
+}
+.left_muen TD.editRightTd {
+	PADDING-LEFT: 10px; BACKGROUND-COLOR: #fff
+}
+.left_muen TR.editFooterTr {
+	HEIGHT: 40px; BACKGROUND-COLOR: #ebf4fd
+}
+.left_muen TD.editFooterTd {
+	PADDING-LEFT: 150px
+}

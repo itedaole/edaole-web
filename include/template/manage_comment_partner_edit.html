@@ -1,0 +1,119 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<!--{include manage_left_menu}-->
+<div class="right_main">
+<div id="bd" class="cf">
+<div id="leader">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_team('team')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+
+            <div class="box-content">
+                <div class="head">
+				<!--{if $team['id']}-->
+					<h2>编辑标签</h2>Edit the label
+					
+				<!--{else}-->
+					<h2>新建标签</h2>The new label
+				<!--{/if}-->
+                
+                <ul class="filter">
+                       <li><a href="comment_partner_index.php#mm">标签列表</a></li>
+                    </ul>
+				</div>
+                <div class="sect">
+				<form id="-user-form" method="post" action="/manage/comment/comment_partner_edit.php?id={$comp['id']}" class="validator">
+					<input type="hidden" name="id" value="{$comp['id']}" />
+
+					<div class="field">
+						<label>标题</label>
+						<input type="text" size="15" name="name" class="f-input" value="${htmlspecialchars($comp['name'])}" datatype="require" require="true" />
+					</div>
+                    
+                    <div class="field">
+						<label>分类</label>
+                     <span style="width:100px;float:left;"><input type="checkbox" id="city_all" value="0"/>全选</span>
+                    </div>
+                    
+					<div class="field" style="padding-left:115px;width:775px;">
+	
+						
+						
+						<!--{loop $cate $index $one}-->
+							<span style="width:90px;float:left; margin:5px">
+								<input type="checkbox" class="city_checkbox" name="cat_id[]" value="{$one['id']}" <!--{if preg_match("/@".$one['id']."@/i", $comp['cat_id']) or $comp['cat_id']==''}-->checked<!--{/if}-->/>{$one['name']}
+							</span>
+						<!-- {/loop} -->
+					</div>
+					
+					</div>
+                    
+                    <div class="field">
+					<input type="submit" value="好了，提交" name="commit" id="leader-submit" class="formbutton" style="margin:10px 0 0 120px;"/>
+                    
+                    </div>
+				</form>
+                </div>
+            </div>
+
+        </div>
+	</div>
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+<script type="text/javascript">
+window.x_init_hook_teamchangetype = function(){
+	X.team.changetype("{$team['team_type']}");
+};
+window.x_init_hook_page = function() {
+	X.team.imageremovecall = function(v) {
+		jQuery('#team_image_'+v).remove();
+	};
+	X.team.imageremove = function(id, v) {
+		return !X.get(WEB_ROOT + '/ajax/misc.php?action=imageremove&id='+id+'&v='+v);
+	};
+};
+$(function(){
+	$('#city_all').click(function(){
+		if($(this).attr('checked') == true){
+			$('.city_checkbox').attr('checked',true);
+		}else{
+			$('.city_checkbox').attr('checked',false);
+		}
+	});
+	$('.city_checkbox').click(function(){
+		if($(this).attr('checked') == false){
+			$('#city_all').attr('checked',false);
+		}
+	});
+	$('.field input[name="p_id"]').keyup(function(){
+		$.get("part.php",{
+				'value':$("#partner_id").val()
+			},function(data){
+			s = $("#partner_id").val();
+			if(data=='0') $("#partner_id").css('color','#FFCC33');
+			else $("#partner_select").load('part.php?value='+s );
+		});
+	});
+
+});
+function changecate(cid) {
+	$.get("category.php",{
+		'cateid':cid
+		},function(data){
+			$("#sub_id").load('category.php?cateid='+cid );
+		});
+}
+
+
+
+</script>
+<!--{include manage_footer}-->

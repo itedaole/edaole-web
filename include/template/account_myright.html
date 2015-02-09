@@ -1,0 +1,32 @@
+<div class="myright">
+      <div class="mr"><span class="floatleft username"><b>Hi，<!--{if $_SESSION['ali_token']}-->
+				${mb_strimwidth($login_user['realname'],0,10)}！
+                <!--{else}-->
+				${mb_strimwidth($login_user['username'],0,10)}！
+				<!--{/if}--></b></span><span class="floatright"><a href="/account/settings.php">编辑个人资料</a></span></div>
+   <div class="mr">会员等级：<img title="1级" src="http://www.0750.tuanzhang.cc/app/Tpl/0750//public/images/review/1.gif"></div>
+   <div class="mr"><span class="floatleft">账户余额：<span class="underline" id="red">¥${moneyit($login_user['money'])}</span></span><span class="floatright"><a href="/index.php?m=UcTocash&amp;a=index">提现</a></span></div>
+   <div class="mr"><span class="floatleft">推广佣金：<a href="/index.php?m=UcRebates&amp;a=payindex" style="cursor:pointer;" class="underline red" id="red">¥0</a></span></div>
+      <div class="mr">会员积分：<span class="underline" id="orange">5</span><span class="floatright"><a id="red" target="_blank" href="/index.php?m=Exchange&amp;a=index"><strong>兑换代金券</strong></a></span></div>
+      <div class="mr">上次登录IP：<span>27.46.130.219</span></div>
+         <div class="panel mr mr1">
+    <hr>
+    <p><b>我已支付成功，为什么没有0750团购券？</b><br>
+    因为还没有到达最低团购人数，一旦凑够人数，您就会看到0750团购券了。</p>
+    <hr>
+    <p><b>什么是已过期订单？</b><br>
+    如果某个订单未及时付款，那么等团购结束时就无法再付款了，这种订单就是过期订单。</p>
+    <hr>
+   </div>
+   <div class="panel mr mr1">
+    <div class="title"><span class="floatleft"><img src="http://www.0750.tuanzhang.cc/app/Tpl/0750//public/images/detail/wb.jpg"><span id="orange">关注我们</span></span><span class="floatright"><a class="plus" href="http://e.weibo.com/0750tuan" target="_blank">关注</a></span></div>
+    <div class="list">
+     <p><img src="http://www.0750.tuanzhang.cc/app/Tpl/0750//public/images/detail/sever01.jpg">客服热线：0750-3135001</p>
+     <p><img src="http://www.0750.tuanzhang.cc/app/Tpl/0750//public/images/detail/sever02.jpg">客服服务时间：08:30-19:00</p>
+     <p style="padding-left:20px;">客服值班：<br>周一至周日(节假日除外)</p>
+     <p><img src="http://www.0750.tuanzhang.cc/app/Tpl/0750//public/images/detail/sever03.jpg">投诉邮箱：</p>
+     <p style="padding-left:20px;"><a href="mailto:1401620830@qq.com">1401620830@qq.com</a></p>
+     <p class="put"><a target="_blank" href="/feedback/seller.php">想发布团购吗？(点我在线发布)</a></p>
+    </div>
+   </div>
+  </div>

@@ -1,0 +1,48 @@
+<?php
+
+return array(
+
+/*
+
+商户私钥为商家自行生成，支付宝公钥需要用商户私钥对应的公钥去支付宝商家后台换取
+
+公钥注意事项，公钥必须以 -----BEGIN PUBLIC KEY----- 和 -----END PUBLIC KEY----- 包着，换行位置请勿自行修改
+格式例如：
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsL/b8S2FW4DUqsBIXMGEyI6J3j5yL88q8hUHc
+XAYhcqvIkKZPXUOvn18w4utEC3oimmJFT6gLpzUz10Ix3KOAeUcsCwi2WqomuVo1T23A8ThUCklj
+KuiHjibZvglDsF4sGrUS5FAGEWR4htVY9PgaCQAUyc6o1RBCLDqR9Yao0QIDAQAB
+-----END PUBLIC KEY-----
+
+公钥注意事项，公钥必须以 -----BEGIN RSA PRIVATE KEY----- 和 -----END RSA PRIVATE KEY----- 包着，换行位置请勿自行修改
+格式例如：
+-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQC6d2p9DdbBAGjoWWBiQQiG3rJSzarAeaAHgjwkBhAkdxMhftWC
+d7qaWbgcpDy/7b42C9Mu5JBIy5LEO5apxWI+859HCtT8LTkSNCCNNOj26xW4iIo6
+Iz99gwVYiOVRpApHhcbUADPQsZF0SwUVf37EqVRAdCUTeHYVy6nc1JLZcQIDAQAB
+AoGABNngelpm0OSa1hilKkk42JFooEDbhWBkqm1X9TP3LYuvgrqTAW7t+uAEqzIW
+poOf5DYQi3LE0jABpHtMYyRQdvltGZS/YvMIfNy0pdbzdDaQjWZXoMJwimzCBkvQ
+LgQJQYJpR5vakBmwmHP0Arkj0Oah2T1hYzuINn+ZcNc05xUCQQDjKV5q3HU8Nw9E
+h6kb60B3ZMUZTGw9gpXywTjjjnF9pG7INrPVkkvZrUr3MIvG/SN0V/XuiTD9IOh0
+Ojzzx2zDAkEA0iN6I83uVFbcK0dt/hIbpeAaMCz4+raeZbUGmIFkjAGd7te+Gcnq
+TfPBV/b4Wy8xbjqfBSOs5Dfk2VJuFRWNuwJAE6ncE3H77/dwKeV4XQNTNEKT0SnN
+YNGx+y6ApyoIZvDZ6hjaHk2opTIcACPCpbn53LNUhY54oCC+HnmAFzYXEwJAVPkd
+mb7bIeWh0CppMvUVkwTE8jgtUgxojs4d5atlAixhNcStzXXVtkHcK/rlQNIblexE
+g2qCriJf+vUXKJV3owJAOFutnF8JCNSAzfwE2GGn6cOa/loQqsAIonL0G1+KwoSi
+SxA5pYWeKlHT5NHKLggZkQtJiNy3i69PtuglbL7qSQ==
+-----END RSA PRIVATE KEY-----
+
+*/
+//以下为例子，请团长们自己生成自己的密钥
+//银联公钥
+
+	'PATH_UMS_PUB_PEM'=>'',
+
+//商户私钥
+
+    'PATH_UMS_RSA_PRI_PEM'=>'',
+
+
+    );
+
+?>

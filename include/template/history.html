@@ -1,0 +1,30 @@
+ <div class="side history" id="history">
+  <div class="title"><span class="floatleft">浏览历史</span><a href="javascript:;" class="floatright empty" onClick="ClearHistory();">清空</a></div>
+  <div class="list">
+  
+  
+   <!--{if $history_team}-->
+    <!--{loop $history_team $index $one}-->
+  <div class="box">
+       <ul>
+        <li>
+         <div class="pi floatleft"><a href="/team.php?id={$one['id']}" target="_blank"><img src="${team_image($one['image'])}" width="65" height="41"></a></div>
+         <div class="ti floatleft"><a href="/team.php?id={$one['id']}" target="_blank" title="{$one['title']}"><span>[${get_area_name($one['area_id'])}]</span>${mb_strimwidth($one['title'],0,30,'...')}</a></div>
+         <div class="pr floatleft"><b class="fee red">{$currency}${moneyit($one['team_price'])}</b><b class="exfee">{$currency}${moneyit($one['market_price'])}</b></div>
+         
+        </li>
+       </ul>
+    </div>
+    <!--{/loop}-->
+  
+   <!--{else}-->
+  
+      <div class="box">
+       <ul>
+        <li class="tips">尚未有浏览记录，<a href="/index.php">去逛逛</a></li>
+       </ul>
+    </div>
+     <!--{/if}--> 
+      </div>
+ </div>
+    </div>

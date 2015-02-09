@@ -1,0 +1,51 @@
+
+
+
+<script>
+$(function(){
+	$('.birthday a.c_close').click(function(){
+		$('.birthday .pos').addClass('closing');
+		setTimeout("$('.birthday').hide()",300);
+        $.cookie("c_birthday_thi",1,{
+				expires: 30,
+				path: '/'
+			});
+	});
+});
+</script>
+
+
+
+<div class="footer">
+	<div class="inside">
+		
+		<div class="dd">
+			<ul class="footer_link">
+				<li><a href="/news.php?id=10" target="_blank">关于我们</a></li>
+				<li><a href="/news.php?id=7" target="_blank">联系我们</a></li>
+				<li><a href="/news.php?id=11" target="_blank">招聘岗位</a></li>
+				<li><a href="/news.php?id=16" target="_blank">隐私申明</a></li>
+				<li><a href="/news.php?id=15" target="_blank">用户协议</a></li>
+			</ul>
+		</div>
+		<div class="dd copyright">
+			<p>&copy;edaole.com. ALL RIGHTS RESERVED.&nbsp;<a href="mailto:info@edaole.com">E-mail: info@edaole.com</a> <a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备14042114号</a>
+			</p>
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="/static/0750/js/jquery.lazyload.min.js"></script>
+<script src="/static/0750/js/owr.js" type="text/javascript"></script>
+<script src="/static/0750/js/ie6.js" type="text/javascript"></script>
+<script src="/static/0750/js/js.js" type="text/javascript"></script>
+<script src="/static/0750/js/scroll.js" type="text/javascript"></script>
+<script src="/static/0750/js/scrollFix.js" type="text/javascript"></script>
+<script src="/static/0750/js/scrollStu.js" type="text/javascript"></script>
+<script src="/static/0750/js/common.js" type="text/javascript"></script>
+<link href="/static/0750/css/birthday.css" rel="stylesheet" type="text/css">
+<div class="birthday" style="display: none;"> <div class="mask"></div> </div>

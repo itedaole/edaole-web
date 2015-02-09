@@ -1,0 +1,56 @@
+<!--{include biz_header}-->
+<style type="text/css">
+table{ font-size:16px;}
+.sect p{ line-height:26px; padding-left:20px;}
+.line_p{ border-bottom:#f57900 solid 1px; padding:10px;}
+.line_p a{ border:#0C6 solid 1px; margin:5px; padding:5px;}
+.line_p a.cur{ background:#ff3300;color:#FFF;}
+.tk_p{ margin-top:15px; padding:18px;}
+.tk_p a{ padding:3px 10px; margin-left:20px; border:#ccc solid 1px; background:#ccc; color:#FFF}
+</style>
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="coupons">
+    <div id="content" class="coupons-box clear mainwide">
+		
+            <div class="box-content">
+                <div class="head">
+                   <p class="line_p">
+                    <a href="/biz/bill_index.php">财务统计</a>
+                    <a href="/biz/bill_list.php" class="cur">自提结款</a>
+                   </p>
+                    <p class="tk_p">当前可提款金额合计：<span style="color:#F00;font-weight:bold;">{$bill_price}元</span><a class="ajaxlink" ask="确定申请账单？" href="/ajax/bill.php?action=bill">申请账单</a></p>
+				</div>
+                <div class="sect">
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+					<tr><th width="200">账单号</th><th width="160">申请日期</th><th width="160">结算金额</th><th width="150">状态</th><th width="150">操作</th></tr>
+					<!--{loop $partner_bill $index $one}-->
+					
+					<tr ${$index%2?'':'class="alt"'} id="team-list-id-{$one['id']}">
+						<td style="text-align:left;">{$one['bill_sn']}</td>
+						<td>${date('Y-m-d',$one['add_time'])}</td>
+						<td>{$one['price']}</td>
+						<td>
+                            <!--{if $one['bill_status'] == 0}-->
+                                 审核中
+                             <!--{elseif $one['bill_status'] == 1}-->
+                                 已结算
+                             <!--{else}-->
+                                 已拒绝
+                             <!--{/if}-->
+                        </td>
+						<td class="op" nowrap><a href="/ajax/bill.php?action=billdetail&id={$one['id']}" class="ajaxlink">详情</a></td>
+					</tr>
+					<!--{/loop}-->
+					<tr><td colspan="6">{$pagestring}</tr>
+                    </table>
+				</div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include biz_footer}-->

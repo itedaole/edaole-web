@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<script src="style/jquery-1.9.1.min.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+
+</head>
+
+<body mon="position=list">
+
+
+
+
+
+
+<div id="j-goods-container">
+
+
+
+
+<section class="w-goods">
+
+
+ <div style=" line-height:32px; padding:10px 20px;">
+    <p>{$team['title']}</p>
+   <p style="color:#33b7a9;">
+   已消费 <b style="margin:0 10px;"> {$team['coupon_number']}</b>
+   未消费 <b style="margin:0 10px;"> {$no_xiaofei}</b>
+   </p>
+ </div>
+
+
+</section>
+<a style="display:block">
+  <div style="overflow:hidden; text-align:center; line-height:40px; padding:0 20px;color:#746d65;background:#efefef">
+     <span style="float:left">日期</span>
+     <span style="float:right">消费数量</span>
+  </div>
+</a>
+<!--{loop $sum_c $index $one}-->
+
+<section class="w-goods">
+ <a style="display:block;${$one[i]%2?'background:#f7f6f4':''}" href="coupon.php?id={$id}&d={$one['m']}">
+  <div style="overflow:hidden; line-height:20px; padding:0 10px;color:#746d65;">
+     <span style="float:left">{$one['m']}</span>
+     <span style="float:right">{$one['n']}</span>
+
+  </div>
+  </a>
+ </section>
+  <!--{/loop}-->  
+</div>
+
+
+
+
+
+
+
+
+
+</body></html>

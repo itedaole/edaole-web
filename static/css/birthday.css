@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+/* 周年庆开场 */
+
+.birthday{position:fixed; _display:none; z-index:99; top:0px; left:0px; width:100%; height:100%;}
+.birthday div{background-color:transparent;}
+.birthday .pos{position:fixed; z-index:100; top:50%; left:50%; width:450px; height:400px; margin:-200px 0 0 -225px;}
+.birthday .mask{position:fixed; z-index:99; background-color:#000; filter:alpha(opacity=10); -moz-opacity:.1; -webkit-opacity:.1; opacity:.1; width:100%; height:100%;}
+.birthday .pos a ,.birthday .pos i{display:block; position:absolute;}
+.birthday .pos a.close{background: url(img/button.png) 0 0 no-repeat; width:26px; height:26px; z-index:104; top:13px; right:13px; background-color:#fff; -moz-border-radius:13px; -webkit-border-radius:13px; border-radius:13px; overflow:visible; text-indent:-9999px;}
+.birthday .pos a.close:hover{background-position:-30px 0;}
+.birthday .pos a.pic{background:url(img/4th_c.png) no-repeat; width:450px; height:400px; text-indent:-9999px; z-index:102; top:0; left:0;}
+.birthday .pos a.font{z-index:103; font-size:28px; color:#fff000; text-align:center; width:450px; bottom:55px; left:0;}
+.birthday .pos i.cricle{z-index:101; background:url(img/4th_c_b.png) no-repeat; width:450px; height:400px; top:0; left:0;}
+/* movie */
+@keyframes cricle
+{
+0%   {transform:rotate(1deg); -moz-transform:rotate(1deg); -webkit-transform:rotate(1deg); -o-transform: rotate(1deg);}
+100% {transform:rotate(360deg); -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); -o-transform: rotate(360deg);}
+}
+@-moz-keyframes cricle
+{
+0%   {transform:rotate(1deg); -moz-transform:rotate(1deg); -webkit-transform:rotate(1deg); -o-transform: rotate(1deg);}
+100% {transform:rotate(360deg); -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); -o-transform: rotate(360deg);}
+}
+@-webkit-keyframes cricle
+{
+0%   {transform:rotate(1deg); -moz-transform:rotate(1deg); -webkit-transform:rotate(1deg); -o-transform: rotate(1deg);}
+100% {transform:rotate(360deg); -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); -o-transform: rotate(360deg);}
+}
+@-o-keyframes cricle
+{
+0%   {transform:rotate(1deg); -moz-transform:rotate(1deg); -webkit-transform:rotate(1deg); -o-transform: rotate(1deg);}
+100% {transform:rotate(360deg); -moz-transform:rotate(360deg); -webkit-transform:rotate(360deg); -o-transform: rotate(360deg);}
+}
+.birthday .pos i.cricle{
+animation:cricle 5s linear .35s infinite;
+-moz-animation:cricle 5s linear .35s infinite;
+-webkit-animation:cricle 5s linear .35s infinite;
+-o-animation:cricle 5s linear .35s infinite;
+}
+@keyframes scale
+{
+0%   {transform:scale(.5,.5); -moz-transform:scale(.5,.5); -webkit-transform:scale(.5,.5); -o-transform:scale(.5,.5);}
+100% {transform:scale(1,1); -moz-transform:scale(1,1); -webkit-transform:scale(1,1); -o-transform:scale(1,1);}
+}
+@-moz-keyframes scale
+{
+0%   {transform:scale(.5,.5); -moz-transform:scale(.5,.5); -webkit-transform:scale(.5,.5); -o-transform:scale(.5,.5);}
+100% {transform:scale(1,1); -moz-transform:scale(1,1); -webkit-transform:scale(1,1); -o-transform:scale(1,1);}
+}
+@-webkit-keyframes scale
+{
+0%   {transform:scale(.5,.5); -moz-transform:scale(.5,.5); -webkit-transform:scale(.5,.5); -o-transform:scale(.5,.5);}
+100% {transform:scale(1,1); -moz-transform:scale(1,1); -webkit-transform:scale(1,1); -o-transform:scale(1,1);}
+}
+@-o-keyframes scale
+{
+0%   {transform:scale(.5,.5); -moz-transform:scale(.5,.5); -webkit-transform:scale(.5,.5); -o-transform:scale(.5,.5);}
+100% {transform:scale(1,1); -moz-transform:scale(1,1); -webkit-transform:scale(1,1); -o-transform:scale(1,1);}
+}
+.birthday .pos{
+animation:scale .4s ease-in-out;
+-moz-animation:scale .4s ease-in-out;
+-webkit-animation:scale .4s ease-in-out;
+-o-animation:scale .4s ease-in-out;
+-moz-transition:all .3s ease-in-out;
+-webkit-transition:all .3s ease-in-out;
+transition:all .3s ease-in-out;
+}
+.birthday .closing{
+top:75px; left:300px; transform:scale(0,0); -moz-transform:scale(0,0); -webkit-transform:scale(0,0); -o-transform:scale(0,0);
+}

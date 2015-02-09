@@ -1,0 +1,139 @@
+@CHARSET "UTF-8";
+.slides { margin: 0px auto; width: 100%;  overflow: hidden; position: relative; }
+.slider-item {
+	width: 100%;
+	height: 572px;
+	float: left;
+	background-color: #f5f5f5;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index:100;
+}
+#fixed-top {
+    display: table;
+    height: 100%;
+    left: 0;
+    height:50px;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border:1px solid #dedede;
+    margin:0;
+    padding:0;
+}
+#fixed-top > header > div {
+    z-index: 1;
+}
+
+#fixed-top > .table-row > * {
+    display: table-cell;
+    vertical-align: bottom;
+}
+#fixed-top .filler {
+    height: 100%;
+}
+#fixed-top > .table-row > * {
+    display: table-cell;
+    vertical-align: bottom;
+}
+.fixed-button {
+    background: none repeat scroll 0 0 #fafafa;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translate(0px, 0px);
+    z-index: 3;
+    height:60px;
+    width: 100%;
+    margin: 0 auto;
+    position:static;
+}
+.containerCentered{height:50px;line-height: 0.5em; padding-top: 9px; padding-left: 3%;overflow:none;
+    padding-right: 3%;}
+.fancy-down-arrow-grey {
+    background: url("img/fancy-down-arrow2x.png") no-repeat scroll center center / 22px 13px transparent;
+    border: 1px solid #d3d3d3;
+    border-radius: 21px;
+    display: inline-block;
+    height: 38px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-indent: -999em;
+    width: 38px;
+}
+.fixed-button .download-left-block {width: 210px;float: left;}
+
+.fixed-button .download-btn {
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+    padding: 12px 14px 14px;
+    margin: 0 auto;
+    overflow: hidden;
+    float:right;
+    cursor:pointer;
+    text-transform:Uppercase;
+    margin-right:66px;
+}
+.fixed-button .download-btn:hover a{color:#ff6e03;}
+.fixed-button .download-btn a:hover{color:#ff6e03;}
+.fixed{
+	position: fixed;
+	overflow:unset;
+	top:0;
+	border:1px solid #dedede;
+}
+.fixed .download-btn {background-color:#ff6e03;border-color:#ff6e03;}
+.fixed .download-btn a{color:#ffffff;}
+.fixed .download-btn:hover a{color:#ffffff;}
+.fixed .download-btn:hover{color:#ffffff; background-color: #f36c09; border-color: #f36c09;}
+.fixed .download-btn a:hover{color:#ffffff;}
+.fixed .fancy-down-arrow-grey{display:none;}
+/*search box in big image**/
+.banner-text-area{left: 0; padding-bottom: 30px; padding-top: 30px; position: relative; right: 0;text-align:center;top:20px;}
+.banner-text{font-size:37px;width:683px;color:#ffffff;word-break:normal;text-shadow: -1px 2px 3px #000000; }
+.banner-search-area { background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; left: 0; padding-bottom: 30px; padding-top: 30px; position: absolute; right: 0; }
+.banner-search-box { float: left; width: 100%;}
+.search-form-input-wrapper { display: inline-block; position: relative; width:520px}
+.keywords-wrapper { display: inline-block; position: relative; float:left;border-right:0;}
+.text-center{text-align:center;}
+#banner_keywords{width:290px;}
+.input-large { font-size: 16px; padding-bottom: 10px; padding-top: 10px; }
+.select-box{float:left;}
+[type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="tel"], textarea, select, .input-prefix, .input-suffix {
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+}
+.select-box select{font-size: 18px;height:40px;width:348px;line-height:40px;-webkit-appearance: menulist-button;}
+.select-box select option{font-size: 18px;height:40px;padding-top:10px;}
+.submit-btn{float:left;}
+.submit-btn input{height:40px;width:100px;background-color: #ff6e03; border:0; color: #fff;font-size:16px;}
+
+/**index page produce block**/
+.xl .panel .newblock .picture ,.xl .panel .newblock .picture .team-image{width:312px; height:175px;}
+.panel .newblock{float:left;  display:inline;}
+.ep .newblock{padding:0;margin-right:20px; }
+.panel .newblockhover{}
+.panel .newblock .picture{padding:0 8px 13px 5px;}
+.panel .newblock .picture .team-image { background-size: cover; overflow: hidden;}
+.panel .newblock .picture .team-image .title {
+	position: relative;
+	background-color: #000;
+	background-color: #000;
+	filter: alpha(opacity = 70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+	top: 135px;
+	height: 40px;
+	margin: 0 auto;
+	line-height: 40px;
+	text-align: center;
+	font-size:14px;
+}
+.panel .newblock .picture .team-image .title a{color:#ffffff;}
+.panel .newblock .picture .team-image .title a:hover{color:#868686;}

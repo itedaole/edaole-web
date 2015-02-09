@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>{$INI['system']['abbreviation']}</title>
+<script src="style/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css"><link rel="stylesheet" type="text/css" href="style/login_css_0_d77a8ad.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+</head>
+
+<body mon="position=login">
+
+
+
+<header class="w-header" mon="type=header">
+
+<!--{include m_header}-->
+
+<h2><a href="my.php">账户详情</a>&nbsp;|&nbsp;收支记录</h2>
+
+<!--{loop $flows $index $one}-->
+<table id="order-list" style="margin:5px 0;" cellspacing="1" cellpadding="2" border="0" bgcolor="#999999" width="100%">
+	<tr><td bgcolor="#CCCCCC" width="60" nowrap>日期：</td><td bgcolor="#FFFFFF">${date('Y-m-d H:i', $one['create_time'])}</td></tr>
+	<tr><td bgcolor="#CCCCCC">内容：</td><td bgcolor="#FFFFFF">{$option_flow[$one['action']]}&nbsp;-&nbsp;<!--{if $one['action']=='coupon'}-->{$INI['system']['couponname']}返利<!--{elseif $one['action']=='invite'}-->好友：{$users[$one['detail_id']]['username']}<!--{elseif $one['action']=='buy'}--><a href="team.php?id={$one['detail_id']}">{$teams[$one['detail_id']]['product']}</a><!--{elseif $one['action']=='refund'}--><a href="team.php?id={$one['detail_id']}">{$teams[$one['detail_id']]['product']}</a><!--{elseif $one['action']=='charge'}-->在线充值<!--{elseif $one['action']=='withdraw'}-->用户提现<!--{elseif $one['action']=='store'}-->线下充值<!--{/if}--></td></tr>
+	<tr><td bgcolor="#CCCCCC">收支：</td><td bgcolor="#FFFFFF">${$one['direction']=='income'?'收入':'支出'}</td></tr>
+	<tr><td bgcolor="#CCCCCC">金额：</td><td bgcolor="#FFFFFF">{$currency}${moneyit($one['money'])}</td></tr>
+</table>
+<!--{/loop}-->
+<table><td>{$pagestring}</td></tr></table>
+
+<!--{include m_footer}-->

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/jquery-1.9.1.min.js"></script>
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+
+</head>
+
+
+
+
+
+<body mon="position=index">
+
+<!--{include mb_header}-->
+
+
+<section class="widget-index-catg clearfix" mon="type=catg">
+
+<div class="coupon_list">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td align="right">编号：</td>
+    <td>{$coupon['id']}</td>
+  </tr>
+  <tr>
+    <td align="right">项目名称：</td>
+    <td>{$teams['team_id']}</td>
+  </tr>
+  
+   <tr>
+     <td align="right">购买者：</td>
+    <td>{$users['username']}</td>
+  </tr>
+  
+  <tr>
+    <td align="right">有效时期：</td>
+    <td>${date('Y-m-d', $coupon['expire_time'])}</td>
+  </tr>
+  
+  <tr>
+    <td align="right">状态：</td>
+    <td><!--{if $coupon['consume']=='Y'}-->已消费<br/>${date('Y-m-d H:i', $coupon['consume_time'])}<!--{elseif $coupon['expire_time']<time()}-->已过期<!--{else}-->有效<!--{/if}--></td>
+  </tr>
+  
+  
+</table>
+
+
+<div>
+</section>
+
+
+<!--{include mb_footer}-->
+
+</body>
+
+</html>

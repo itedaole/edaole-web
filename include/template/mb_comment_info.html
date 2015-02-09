@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script src="/static/js/index.js" type="text/javascript"></script>
+<script src="style/jquery-1.9.1.min.js"></script>
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" href="/static/css/biz.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+
+
+
+
+
+<body mon="position=index">
+<div id="pagemasker"></div><div id="dialog"></div>
+<div id="j-goods-container">
+
+ <div class="comment_info">
+       <div class="cinfo_left">
+           <div class="fen">
+             ${get_xing_fen($comment_num,$all_comment)}
+           </div>
+           <p>{$all_comment}</p>
+           <div class="xing">
+                <p style="width:${get_xing_fen($comment_num,$all_comment)*19}px"> </p>
+           </div>
+       </div>
+       
+       <div class="cinfo_right">
+           <div class="points-area">
+               <div>5分</div>
+                <div class="percent">
+                    <div style="width:${100*$fen_5/$all_comment}%"></div>
+                </div>
+                <div>{$fen_5}人</div>
+           </div>
+           <div class="points-area">
+               <div>4分</div>
+                <div class="percent">
+                    <div style="width:${100*$fen_4/$all_comment}%"></div>
+                </div>
+                <div>{$fen_4}人</div>
+           </div>
+           <div class="points-area">
+               <div>3分</div>
+                <div class="percent">
+                    <div style="width:${100*$fen_3/$all_comment}%"></div>
+                </div>
+                <div>{$fen_3}人</div>
+           </div>
+           <div class="points-area">
+               <div>2分</div>
+                <div class="percent">
+                    <div style="width:${100*$fen_2/$all_comment}%"></div>
+                </div>
+                <div>{$fen_2}人</div>
+           </div>
+           <div class="points-area">
+               <div>1分</div>
+                <div class="percent">
+                    <div style="width:${100*$fen_1/$all_comment}%"></div>
+                </div>
+                <div>{$fen_1}人</div>
+           </div>
+       </div>
+ </div>
+ 
+ <section class="w-goods_act">
+    <a class="<!--{if !$act}-->acur<!--{/if}-->" href="comment_info.php?id={$id}">全部评价</a>
+    <a class="<!--{if $act == 1}-->acur<!--{/if}-->" href="comment_info.php?id={$id}&act=1">差评</a>
+    <a class="<!--{if $act == 'no'}-->acur<!--{/if}-->" href="comment_info.php?id={$id}&act=no">未回复</a>
+ </section>
+
+
+
+
+
+<!--{loop $comment_list_c $index $one}-->
+   <section class="w-goods " mon="action=click&type=item">
+<a id="0" class="clearfix" name="0">
+ 
+        <ul>
+      <li class="title">
+  
+  <span class="item-name">{$one['username']}</span>
+  <span></span>
+  </li>       
+
+<li class="others">
+<span style="float:left; line-height:20px;">
+      <div class="xing">
+                <p style="width:60%"> </p>
+       </div>
+</span>
+<span class="old-price" style="float:right;line-height:20px; font-size:14px;">${date('Y-m-d',$one['comment_time'])}</span>
+</li>
+
+<li class="title" style="margin-top:10px;">
+
+<span style="color:#323232; font-size:14px; line-height:20px;">{$one['comment_content']}</span>
+
+</li>
+</ul>
+ 
+</a>
+<p style="text-align:right; overflow:hidden;">
+<!--{if $one['reply_cotent']}-->
+<a class="ajaxlink" href="ajax_comment.php?action=comment&id={$one['id']}" style="line-height:20px; padding:5px; float:right; width:50px; text-align:center;font-size:14px; background:#24bbac;color:#ecf7fb;border-radius:3px; margin:0 10px 10px 0;">查看</a></p>
+<!--{else}-->
+
+<a class="ajaxlink" href="ajax_comment.php?action=comment&id={$one['id']}" style="line-height:20px; padding:5px; float:right; width:50px; text-align:center;font-size:14px; background:#24bbac;color:#ecf7fb;border-radius:3px; margin:0 10px 10px 0;">回复</a>
+<!--{/if}-->
+</p>
+</section>
+<!--{/loop}-->
+
+
+
+</div>
+
+
+</body>
+
+</html>
+
+
+</script>

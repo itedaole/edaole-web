@@ -1,0 +1,368 @@
+<!--{include header}-->
+
+<div class="content">
+ <div class="mycenter">
+  
+  
+  <!--{include user_control}-->
+  
+
+  <div class="myleft">
+  <div style="color:red;">收不到短信，温馨提示：<br>&nbsp;&nbsp;&nbsp;&nbsp;由于短信服务商的原因，团购成功后有可能收不到短信或者延时收到短信，
+   如果收不到短信您也可以进入订单详情抄下或拍下团购券编号(新团购券没有密码了)去消费喔，如果有疑问请联系我们的企业客服QQ!</div>
+   <p class="keepType">分类：
+    <a class="focus" href="/index.php?m=UcOrder&amp;a=index&amp;status=0">全部</a>
+    <a href="/index.php?m=UcOrder&amp;a=index&amp;status=1">待付款</a>
+    <!-- <a href="/index.php?m=UcOrder&a=index&status=2" >待评价</a>
+    <a href="/index.php?m=UcOrder&a=index&status=3" >已评价</a> -->
+    </p>
+   <div class="date">
+      </div>
+   <hr class="hrLine">
+   
+   
+   
+
+       
+       
+       
+       
+       
+       
+
+				    <!--{if $selector=='index' || $selector=='pay' || $selector=='unpay' || $selector=='' }-->
+   <table width="795" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tbody><tr class="first_tr">
+     <td width="45%" valign="middle" height="36" align="center">团购项目</td>
+     <td width="10%" valign="middle" height="36" align="center">数量</td>
+     <td width="15%" valign="middle" height="36" align="center">总价</td>
+     <td width="15%" valign="middle" height="36" align="center">订单状态</td>
+     <td width="15%" valign="middle" height="36" align="center">操作</td>
+    </tr>
+					<!--{loop $orders $index $one}-->
+						<tr ${$index%2?'':'class="alt"'}>
+							<td style="text-align:left;"><a class="deal-title" href="/team.php?id={$one['team_id']}" target="_blank">{$teams[$one['team_id']]['title']}</a></td>
+							<td>{$one['quantity']}</td>
+							<td><span class="money">{$currency}</span>${moneyit($one['origin'])}</td>
+							<td><!--{if $one['state']=='pay'}-->已付款<!--{elseif $teams[$one['team_id']]['close_time']>0}-->已过期<!--{else}-->未付款<!--{/if}--></td>
+							<td class="op"><!--{if ($one['state']=='unpay'&&$teams[$one['team_id']]['close_time']==0)}--><a href="/order/check.php?id={$one['id']}">付款</a><!--{elseif $one['state']=='pay'}--><a href="/order/view.php?id={$one['id']}">详情</a>&nbsp;|&nbsp;<a href="/order/ajax.php?action=ordercomment&id={$one['id']}" class="ajaxlink">${$one['comment_time'] ? $option_commentgrade[$one['comment_grade']] : '点评'}</a><!--{elseif $teams[$one['team_id']]['close_time']>0 }--><a href="/ajax/order.php?action=orderdel&id={$one['id']}" class="ajaxlink" ask="确定删除本订单？">删除</a><!--{/if}--></td>
+						</tr>
+					<!--{/loop}-->
+						<tr><td colspan="5">{$pagestring}</td></tr>
+                    </table>		
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+					<!--{else}-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+   <table width="795" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tbody><tr class="first_tr">
+     <td width="45%" valign="middle" height="36" align="center">团购项目</td>
+     <td width="10%" valign="middle" height="36" align="center">数量</td>
+     <td width="15%" valign="middle" height="36" align="center">总价</td>
+     <td width="15%" valign="middle" height="36" align="center">订单状态</td>
+     <td width="15%" valign="middle" height="36" align="center">操作</td>
+    </tr>
+					<!--{loop $orders $index $one}-->
+						<tr ${$index%2?'':'class="alt"'}>
+							<td style="text-align:left;"><a class="deal-title" href="/team.php?id={$one['team_id']}" target="_blank">{$teams[$one['team_id']]['title']}</a></td>
+							<td>{$one['quantity']}</td>
+							<td><span class="money">{$currency}</span>${moneyit($one['origin'])}</td>
+							<td>已付款</td>
+							<td class="op"><!--{if ($one['rstate']=='askrefund')}-->退款审核中<!--{elseif $one['rstate']=='normal'}--><a href="/ajax/refund.php?action=askrefund&id={$one['id']}" class="ajaxlink">申请退款</a>
+							<!--{elseif $one['rstate']=='berefund'}-->退款成功<!--{elseif $one['rstate']=='norefund'}-->退款失败<!--{/if}--></td>
+						</tr>
+					<!--{/loop}-->
+						<tr><td colspan="5">{$pagestring}</td></tr>
+                    </table>
+					<!--{/if}-->
+			
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   <div class="listBill initPage">
+      </div>
+  </div>
+  
+  
+  
+  <!--{include account_myright}-->
+  
+  
+  
+ </div>
+<div class="groupbond_sms_box  c_dialog oftengo">
+        <div class="pos">
+          <p class="t">发送短信</p>
+        <div class="init">
+        <table width="400" align="center" border="0" cellspacing="0" cellpadding="0" class="init_four">
+        <tbody><tr class="f2"><td align="left" class="va_t">0750团购券</td>
+        <td>
+        <div id="bond_box"></div>
+        </td>
+        </tr>
+        <tr class="f2"><td align="left" class="f2">手机号码</td><td><input name="gb_mobile_phone" id="gb_mobile_phone" type="text" value="" size="20" maxlength="50" height="20"></td></tr>
+                </tbody></table>
+        </div>
+      <p class="btn"><a href="javascript:;" class="ok" onclick="send_sms_gb();">发送</a><a href="javascript:;" class="close">关闭</a></p>
+    </div>
+</div>
+
+
+
+<div class="groupbond_print_box c_dialog oftengo">
+        <div class="pos">
+          <p class="t">打印团购券</p>
+        <div class="init">
+        <div class="cn_pop_gb button">
+        <select id="departs_list_print" style="width:300px;"></select>
+		<input type="hidden" id="gb_print_id" value="">
+        </div>
+    </div>
+      <p class="btn"><a href="javascript:;" class="ok" onclick="print_gb();">打印</a><a href="javascript:;" class="close">关闭</a></p>
+    </div>
+</div>
+
+<script type="text/javascript">
+window.onload=function(){
+// $(".sms_btn").click(function(){
+		// var gb_id = $(this).attr("rel");
+		// $.ajax({
+			  // url: ROOT_PATH+"/services/ajax.php?run=getGbDownData&gb_id="+gb_id,
+			  // dataType: "json",
+			  // success:function(data)
+			  // {
+				  // $("#departs").empty();
+				  // var departs = data.departs;
+				  // for(var i=0;i<departs.length;i++)
+				  // {
+				  	 // $("#departs").append("<option value='"+departs[i].id+"'>"+departs[i].depart_name+"</option>");
+				  // }
+			  	  // $("#gb_mobile_phone").val(data.mobile);
+			  	  // $("#gb_id").val(gb_id);
+			// 　 	  $.ShowDialog({"dialog":"groupbond_sms_box"});
+				// },
+				// error:function(a,b,c)
+				// {
+					// alert(a.responseText);
+				// }
+		// });
+		// return false;
+	// });
+	
+	// $(".down_btn").click(function(){
+		// var gb_id = $(this).attr("rel");
+		// $.ajax({
+			  // url: ROOT_PATH+"/services/ajax.php?run=getGbDownData&gb_id="+gb_id,
+			  // dataType: "json",
+			  // success:function(data)
+			  // {
+				  // $("#departs_list").empty();
+				  // var departs = data.departs;
+				  // for(var i=0;i<departs.length;i++)
+				  // {
+				  	 // $("#departs_list").append("<option value='"+departs[i].id+"'>"+departs[i].depart_name+"</option>");
+				  // }
+			  	  // $("#gb_down_id").val(gb_id);
+			// 　 	  $.ShowDialog({"dialog":"groupbond_down_box"});
+				// },
+				// error:function(a,b,c)
+				// {
+					// alert(a.responseText);
+				// }
+		// });
+		// return false;
+	// });
+	
+	
+	// $(".print_btn").click(function(){
+		// var gb_id = $(this).attr("rel");
+		// $.ajax({
+			  // url: ROOT_PATH+"/services/ajax.php?run=getGbDownData&gb_id="+gb_id,
+			  // dataType: "json",
+			  // success:function(data)
+			  // {
+				  // $("#departs_list_print").empty();
+				  // var departs = data.departs;
+				  // for(var i=0;i<departs.length;i++)
+				  // {
+				  	 // $("#departs_list_print").append("<option value='"+departs[i].id+"'>"+departs[i].depart_name+"</option>");
+				  // }
+			  	  // $("#gb_print_id").val(gb_id);
+			// 　 	  $.ShowDialog({"dialog":"groupbond_print_box"});
+				// },
+				// error:function(a,b,c)
+				// {
+					// alert(a.responseText);
+				// }
+		// });
+		// return false;
+	// });
+	$(".sms_btn").click(function(){
+		var order_id = $(this).attr("rel");
+		$.ajax({
+			  url: ROOT_PATH+"/services/ajax.php?run=getGbDownData_n&order_id="+order_id,
+			  dataType: "json",
+			  success:function(data)
+			  {
+				  $("#bond_box").empty();
+				  var bonds = data.bonds;
+				  var strtr='<table id="bond_box" width="400" border="0" cellspacing="0" cellpadding="0" class="f3">';
+				  
+				  for(var i=0;i<bonds.length;i++)
+				  {
+					var status='未使用';
+					var strdis='';
+					if(bonds[i].use_time&&bonds[i].use_time!=0)
+					{
+						status='已使用';
+						strdis=' disabled="disabled" ';
+					}
+					if(bonds[i].is_locked==1)
+					{
+						strdis=' disabled="disabled" ';
+						if(bonds[i].uncharge_status==1)
+						{
+							status='退款中';
+						}
+						else if(bonds[i].uncharge_status==2 )
+						{
+							status='已退款';
+						}
+					}
+					 strtr+=' <tr><td style="width:auto;"><input id="chxgb'+bonds[i].id;
+					 strtr+='" class="clsbond" name="chxbond" '+strdis+' type="checkbox" value="'+bonds[i].id+'" />';
+					 strtr+='<label for="chxgb'+bonds[i].id+'">'+bonds[i].goods_name;
+					 strtr+='</label></td><td width="150">序列号:'+bonds[i].sn+'</td><td width="60">'+status+'</td></tr>';
+				  	 //$("#bond_box").append(strtr);
+				  }
+				  strtr+='</table>';
+				$("#bond_box").html(strtr);
+			  	  $("#gb_mobile_phone").val(data.mobile);
+			　 	  $.ShowDialog({"dialog":"groupbond_sms_box"});
+				},
+				error:function(a,b,c)
+				{
+					alert(a.responseText);
+				}
+		});
+		return false;
+	});
+		
+	$(".print_btn").click(function(){
+		var order_id = $(this).attr("rel");
+		$.ajax({
+			  url: ROOT_PATH+"/services/ajax.php?run=getGbDownData_n&order_id="+order_id,
+			  dataType: "json",
+			  success:function(data)
+			  {
+				  $("#departs_list_print").empty();
+				  var bonds = data.bonds;
+				  for(var i=0;i<bonds.length;i++)
+				  {
+				  	 $("#departs_list_print").append("<option value='"+bonds[i].id+"'>序列号:"+bonds[i].sn+"</option>");
+				  }
+			  	  //$("#gb_print_id").val(gb_id);
+			　 	  $.ShowDialog({"dialog":"groupbond_print_box"});
+				},
+				error:function(a,b,c)
+				{
+					alert(a.responseText);
+				}
+		});
+		return false;
+	});
+}
+
+
+function send_sms_gb()
+{
+	var f=false;
+	$(".clsbond").each(function(i){
+	    if(this.checked)
+	    {
+		f=true;
+		var gb_id = $(this).val();
+		var mobile = $("#gb_mobile_phone").val();
+		var depart_id = $("#departs").val();
+				if(!$.checkMobilePhone(mobile))
+		{
+		   alert("手机号码有误。");
+		   return false;			
+		}
+				var url = ROOT_PATH+"/index.php?m=UcGroupBond&a=sms&id="+gb_id+"&mobile="+mobile;
+		$.get(url);
+	    }
+	});
+	if(!f)
+	{
+		alert("请至少选择一个团购券！");
+	}
+	else
+	{
+		alert("团购券信息已经发送至您的手机，请查收！");
+	}
+}
+
+function down_gb()
+{
+	var gb_id = $("#gb_down_id").val();
+	var depart_id = $("#departs_list").val();
+	location.href = ROOT_PATH+"/index.php?m=UcGroupBond&a=download&id="+gb_id+"&depart_id="+depart_id;
+}
+
+function print_gb()
+{
+	var gb_id = $("#departs_list_print").val();
+	// var depart_id = $("#departs_list_print").val();
+	window.open(ROOT_PATH+"/index.php?m=UcGroupBond&a=printbond&id="+gb_id);
+}
+</script>
+</div>
+
+<!--{include footer}-->

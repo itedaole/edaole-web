@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+/* website    : 0750团购网 0750.tuanzhang.cc
+   author     : 林嘉文 Gavin Lin
+   creatTime  : 03.06 2014
+   saveFrom   : ip-42.121.84.115
+   @face-color: #2aa143,#1f9537,#555
+   @face-style: list | search 
+ */
+
+.listpage{padding:0 15px; width:1068px; border-left:1px solid #dedede; height:auto;}
+.listpage .option{height:auto;}
+.listpage .option ,.listpage .line{width:1068px;}
+.listpage .option ul.listblock{float:left;}
+.listpage .option ul.lb1{width:98px;}
+.listpage .option ul.lb2{width:960px; padding-left:5px; border-left:1px solid #eaeaea;}
+.listpage .option ul.lb2 ul.type{float:left; width:870px;}
+.listpage .option ul.lb2 ul.at{width:85px;}.listpage .option .lb2 .at li{font-weight:bold; margin:0; padding:0 0 0 15px;}
+.listpage .option ul.level2 li{height:auto;}
+.listpage .option ul.lb2 .showlist{width:925px; height:auto; margin:10px 0 0 10px; border:1px solid #ededed; padding:5px 10px; display:none; background-color:#f9f9f9;}
+.listcontorl{background-color:#f7f7f7; width:1068px; padding:10px 15px; border:1px solid #dedede; border-top:none; margin-bottom:25px; -moz-box-shadow:0 1px 0 rgba(224,224,224,0.5); -webkit-box-shadow:0 1px 0 rgba(224,224,224,0.5); box-shadow:0 1px 0 rgba(224,224,224,0.5); z-index:1000; white-space:nowrap; height:29px;}
+.listcontorl a{display:inline; float:left; padding:0 10px; height:27px; line-height:27px; border:1px solid #ddd; border-right:none; background-color:#fff;}
+.listcontorl a:hover ,.listcontorl a.active{background-color:#eeeded; color:#444;}.listcontorl a.addborder{border-right:1px solid #ddd;}
+.listcontorl a.uncheck{border:none;}.listcontorl a.uncheck:hover{background-color:transparent;}
+.listcontorl a.nor *{display:inline; float:left;}
+.listcontorl a.nor i{background:url(img/up_i.png) 0 8px no-repeat; margin-left:5px; width:4px; height:27px;}
+.listcontorl a.up i{background-position:0 -21px;}
+.listcontorl a.down i{background-position:0 -49px;}
+.listcontorl a.nc ,.listcontorl a.nc:hover{border:none; background:none;}
+.listcontorl a.nc i{background:url(img/check_i.png) no-repeat; margin:0 3px 0 0; width:13px; height:27px;}
+.listcontorl a.uncheck i{background-position:0 -62px;}.listcontorl a.uncheck:hover i{background-position:0 -25px;}.listcontorl a.checked i ,.listcontorl a.checked:hover i{background-position:0 7px;}
+.listcontorl a.price{position:relative; z-index:1;}
+.listcontorl a.price .pricelaw{position:absolute; z-index:1; top:-1px; display:none; right:-45px; width:45px; padding:3px; background:#fff; height:21px; margin:0; border:1px solid #ddd; border-left-width:0; float:none;}
+.listcontorl a.price .pricelaw input{margin:0; width:40px; height:24px; position:absolute; z-index:1; top:1px; left:5px; cursor:pointer;}
+.listcontorl a.price ,.listcontorl a.price:hover ,.listcontorl a.price *{cursor:default;}
+.listcontorl a.price:hover{background:#fff;}
+.listcontorl a.price .c{width:40px; height:22px; background:none; background:#fff; border:none; border:1px solid #ddd; text-align:center; cursor:pointer;}
+.listcontorl a.price *{margin-top:1px; display:inline;}
+.listcontorl a.price span.line{padding:0 3px;}
+
+.listpage .filters .lb1 li{font-weight:bold;}
+.listpage .filters .lb2 li a{border:1px solid #efefef; height:26px; line-height:26px; padding:0 10px; font-size:13px; color:#8f8f8f;}
+.listpage .filters .lb2 li a:hover{color:#555; border-color:#d9d9d9; background-color:#f6fff8;}.listpage .filters .lb2 li a:hover *{cursor:pointer;}
+.listpage .filters .lb2 li a b{font-weight:bold; color:#E4393C;}
+.listpage .filters .lb2 li a em ,.listpage .filters .lb2 li a i{float:left; display:inline;}
+.listpage .filters .lb2 li a i{margin:10px 0 0 10px; height:7px; width:7px; background:url(img/icons.png) no-repeat -37px -62px; font-size:12px; overflow:hidden;}
+
+.content .pageturning ,.content .loading{float:none; clear:both; padding-bottom:40px; text-align:center;}
+.content .pageturning ul{display:inline;}
+.content .pageturning ul li{display:inline; width:34px; padding:0 2px;}.content .pageturning ul li.turn{width:77px;}
+.content .pageturning ul li a{display:inline; display:inline-block; zoom:1; color:#2aa143; font-size:13px; border:1px solid #ddd; width:32px; height:32px; line-height:32px; background-color:#fff;}.content .pageturning ul li.turn a{width:75px;}
+.content .pageturning ul li a:hover ,.content .pageturning ul li a.focus{background-color:#2aa143; color:#fff; border:1px solid #1f9537;}

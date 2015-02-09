@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+/* website    : 0750团购网 0750.tuanzhang.cc
+   author     : 林嘉文 Gavin Lin
+   creatTime  : 02.28 2014
+   saveFrom   : ip-42.121.84.115
+   @face-color: #2aa143,#1f9537,#ff9900,#ff9000,#555
+   @face-style: common | index | 
+ */
+.content .near{width:1100px; padding:25px 0;}
+.near .catchme ,.near .map{float:left; background:#fff; border:1px solid #dedede; height:450px;}
+.near .catchme{width:326px; border-right:none; padding:12px; height:426px;}
+.near .catchme .t{font-size:16px; height:24px; line-height:24px;}
+.near .catchme .i{margin-top:10px; padding-bottom:30px;}
+.near .catchme .i input{background:none; border:none; font-size:14px; color:#555; float:left;}
+.near .catchme .i .te{width:230px; background:#fff; border:1px solid #ddd; -moz-border-radius:5px 0 0 5px; -moz-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; -moz-box-shadow:1px 1px 5px rgba(0,0,0,.1) inset; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.1) inset; box-shadow:1px 1px 5px rgba(0,0,0,.1) inset; padding:10px;}
+.near .catchme .i .bu{width:74px; -moz-border-radius:0 5px 5px 0; -moz-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0; background:#2aa143; border:1px solid #1f9537; border-left-width:0; color:#fff; padding:10px 0; cursor:pointer;}
+.near .catchme .i .bu:active{background:#1f9537;}
+.near .catchme .d{height:auto; font-size:14px; padding-bottom:10px;}
+.near .catchme .d i{color:#2aa143;}
+.near .catchme .d .nb{display:block; background:#ff9900; border:1px solid #ff9000; color:#fff; padding:10px 15px; text-align:center; -moz-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:16px; text-shadow:1px 1px 0px #ff8000;}
+.near .catchme .d .nb:hover{background:#ff9000;}
+.near .catchme .d .nb:active{background:#ff9900;}

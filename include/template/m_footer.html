@@ -1,0 +1,22 @@
+<footer class="footer" mon="type=footer">
+<section class="login">
+<div class="login-wrap">
+<!--{if $login_user}-->
+<a href="my.php" style="width:120px;" class="btn login-btn" mon="content=login">{$login_user['username']}</a>
+<a href="logout.php" class="btn" mon="content=register">退出</a>
+<!--{else}-->  
+<a href="login.php" class="btn login-btn" mon="content=login">登录</a>
+<a href="signup.php" class="btn" mon="content=register">注册</a>
+<!--{/if}-->
+</div>
+<div class="city-wrap">
+<a class="btn text" href="#"><span>城市：</span></a>
+<a href="#" class="btn" mon="content=city"><span>{$city['name']}</span></a></div>
+</section>
+
+<section class="copyright">©edaole.com 京ICP证067807号</section>
+</footer>
+
+<div class="w-sort__mask" style="height: 3071px;"></div>
+
+

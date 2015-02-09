@@ -1,0 +1,59 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<!--{include manage_left_menu}-->
+<div class="right_main">
+<div id="bd" class="cf">
+<div id="ad">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_market('ad')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+         
+            <div class="box-content">
+                <div class="head">
+					<h2>广告列表</h2>Advertising List
+					<ul class="filter">${current_market_ad('ad')}</ul>
+				</div>
+                <div class="sect">
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+					<tr><th width="50">ID</th><th width="200">名称</th><th width="280">位置</th><th width="40" nowrap>开启</th><th width="40" nowrap>排序</th><th width="150">操作</th></tr>
+					<!--{loop $ads $index $one}-->
+					<tr ${$index%2?'':'class="alt"'}>
+						<td>{$one['id']}</td>
+						<td>{$one['title']}</td>
+						<td>
+							<!--{if $one['type'] == 2}-->
+							   首页轮播广告（713*197）
+							<!--{else if $one['type'] == 3}-->
+							   首页轮播右上广告（240*98）
+							<!--{else if $one['type'] == 4}-->
+							   首页轮播右下广告（240*98）
+							<!--{else}-->
+							   其他位置
+							<!--{/if}-->
+							
+						</td>
+						<td>{$availables[$one['available']]}</td>
+						<td>${intval($one['displayorder'])}</td>
+						<td class="op"><a href="/manage/market/adedit.php?id={$one['id']}">编辑</a>｜<a href="/ajax/ad.php?action=adremove&id={$one['id']}" class="ajaxlink" ask="确定删除该广告？">删除</a>｜<!--{if $one['available']}--><a href="/ajax/ad.php?action=adoff&id={$one['id']}" class="ajaxlink" ask="确定关闭该广告？">关闭</a><!--{else}--><a href="/ajax/ad.php?action=adon&id={$one['id']}" class="ajaxlink" ask="确定开启该广告？">开启</a><!--{/if}--></td>
+					</tr>
+					<!--{/loop}-->
+					<tr><td colspan="8">{$pagestring}</td></tr>
+                    </table>				
+				</div>
+            </div>
+
+        </div>
+	</div>
+
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->

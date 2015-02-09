@@ -1,0 +1,95 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<title>详情</title>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style>
+	#mobi-detail img {width：208px !important; height:auto !important;}
+	body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+
+}
+.bdxq_li li strong{
+	font-size: 12px;
+}
+.xiaofei_tbts {
+	margin-top: 10px;
+	float: left;
+	 *float:none;
+	border: 1px solid #efefe5;
+	background-color: #FFFDE8;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.xiaofei_tbts h3 {
+	font-size: 14px;
+	margin: 0px;
+	padding-bottom: 10px;
+	color: #666;
+}
+.xiaofei_tbts ul{
+	margin: 0px;
+	padding-left: 10px;
+}
+.xiaofei_tbts ul li {
+	font-size: 12px;
+	color: #666;
+	line-height: 16px;
+	float: left;
+}
+.nrbiaoge{
+	font-size: 12px;
+}
+.nrbiaoge .yuanjia, .nrbiaoge .mltj {
+	font-family: Microsoft YaHei;
+	font-size: 12px;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+}
+.nrbiaoge  .mltjg{
+	color: #cc0000;
+	font-size: 12px;
+}
+.nrbiaoge .ml-10 {
+	margin-left: 10px;
+	font-size: 12px;
+}
+.nrbiaoge .mr-10 {
+	margin-right: 10px;
+	font-size: 12px;
+}
+    </style>
+</head>
+<body >
+	<div id='mobi-detail' style="border-radius: 5px; margin:5px;padding:8px;">
+		<div id="deal-stuff" class="cf">
+			<div class="blk detail"><?php echo ($systemreview); ?></div>
+   
+            <div class="xiaofei_tbts">
+            <h3>购买前特别提示/须知</h3>
+            <ul>
+            <?php echo ($notice); ?>
+            </ul>
+          </div>
+			<div  style="font-size:12px;"><?php echo ($detail); ?></div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript">
+	var images = document.images;
+	var count = images.length;
+	for (var i = 0; i < count; i++) {
+		images[i].style.width='100%';
+	};
+	var tables=document.getElementsByTagName('table');
+	var count = tables.length;
+	for (var i = 0; i < count; i++) {
+		tables[i].style.width='100%';
+	};
+	</script>
+</html>

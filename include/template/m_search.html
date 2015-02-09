@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<script src="style/jquery-1.9.1.min.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+<script>alog('speed.set', 'ht',new Date);</script>
+
+<style type="text/css">
+.j-category,.j-area,.j-order,.w-sort__mask{ display:none;}
+.cblock{ display:block;}
+</style>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+     $(".w-sort").children("li").click(function(){
+		  $(this).toggleClass("active").siblings().removeClass("active");
+		  var id = $(this).attr("data-type");	  
+		  $("#"+id).toggleClass("cblock").siblings().removeClass("cblock");
+		  
+		  if($(this).attr("class") == "active"){
+		      $(".w-sort__mask").addClass("cblock")  
+		  }else{
+			 $(".w-sort__mask").removeClass("cblock");
+		}
+	});
+});
+</script>
+</head>
+
+
+
+
+
+
+
+
+<body mon="position=list">
+
+<!--{include m_header}-->
+
+
+
+<section class="w-index-search">
+<form method="get" action="search.php" class="j-search-form">
+<div class="search-input-wrap">
+<input name="searchName" class="j-search-input" autocomplete="off" placeholder="请输入您想找的团购" type="text">
+<i id="j-clear-input"></i>
+<button type="submit" class="j-search-submit">搜索</button>
+</div>
+
+
+<div class="j-search-suggestion search-suggestion"></div></form>
+</section>
+
+
+<article class="p-list" mon="action=click">
+
+
+
+<div id="j-goods-container">
+
+<!--{loop $teams $tindex $team}-->
+
+<section class="w-goods " mon="action=click&amp;type=item">
+ <a href="team.php?id={$team['id']}" mon="query=&amp;page_catg=0&amp;nuomi_order=0&amp;content=item0&amp;dealTinyUrl=swdbwplc&amp;deal_id=964894&amp;nuomi_index=0&amp;pageindex=0" class="clearfix" name="0" id="0">
+ <div class="img-wrapper">
+ <span class="tag-free-reservation"></span>
+ <img style="visibility: visible;" src="${team_image($team['image'], true)}" height="79" width="118">
+ </div>
+ <ul>
+ <li class="title"><span class="store "></span>
+ <span class="item-name">{$team['title']}</span>
+ </li>
+ <li class="info">{$team['summary']}</li>
+ <li class="others"><ins>${moneyit($team['team_price'])}</ins><span class="slash">/</span>
+ <del class="old-price">{$currency}${moneyit($team['market_price'])}</del>
+ <span class="bought">{$team['now_number']}</span>
+ </li>
+ </ul>
+ </a>
+ </section>
+  <!--{/loop}-->  
+</div>
+
+<div class="w-viewmore clearfix" mon="action=click">
+<a href="javascript:;" id="j-gotop" class="op-btn gotop" mon="type=gotop">回到顶部</a>
+</div>
+</article>
+
+
+<!--{include m_footer}-->
+
+</body></html>

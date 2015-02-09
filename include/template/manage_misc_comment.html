@@ -1,0 +1,69 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<!--{include manage_left_menu}-->
+<div class="right_main">
+<div id="bd" class="cf">
+<div id="coupons">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_misc('comment')}</ul>
+	</div>
+    <div id="content" class="coupons-box clear mainwide">
+		<div class="box clear">
+            
+            <div class="box-content">
+                <div class="head">
+                    <h2>订单点评 </h2>Order Reviews
+                    <ul class="filter">
+						<li><form action="/manage/misc/comment.php" method="get">项目ID：<input type="text" name="tid" value="${abs(intval($tid))}" class="h-input" />&nbsp;内容：<input type="text" name="like" value="${htmlspecialchars($like)}" class="h-input" />&nbsp;&nbsp;<input type="submit" value="筛选" class="formbutton"  style="padding:1px 6px;"/><form></li>
+					</ul>
+				</div>
+                <div class="sect">
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+						<tr>
+                            <th width="100" nowrap>用户</th>
+                            <th width="320">项目名称</th>
+                            <th width="80">满意度</th>
+                            <th width="80" nowrap>总体评价</th>
+                            <th width="180" nowrap>评价</th>
+                            <th width="80" nowrap>图片</th>
+                            <th width="150" nowrap>回复</th>
+                        </tr>
+					<!--{loop $orders $index $one}-->
+						<tr ${$index%2?'':'class="alt"'}>
+							<td>{$users[$one['user_id']]['username']}</td>
+							<td>{$one['team_id']}&nbsp;(<a title="{$teams[$one['team_id']]['title']}" class="deal-title" href="/team.php?id={$one['team_id']}" target="_blank">${mb_strimwidth($teams[$one['team_id']]['title'],0,40)}...</a>)</td>
+							<td nowrap><!--{if $one['comment_grade_three']=='3'}-->好评<!--{elseif $one['comment_grade_three']=='2'}-->中评<!--{else}-->差评<!--{/if}--></td>
+							<td>{$one['comment_grade']}分</td>
+							<td><a title="{$one['comment_content']}">${mb_strimwidth($one['comment_content'],0,40)}...</a></td>
+                            <td>
+                              <!--{if $one['image1']}-->
+                                <a href="#"><img width="20" height="20" src="${team_image($one['image1'])}" /></a>
+                              <!--{/if}-->   
+                                <!--{if $one['image2']}-->
+                                <a href="#"><img width="20" height="20" src="${team_image($one['image2'])}" /></a>
+                              <!--{/if}-->  
+                                <!--{if $one['image3']}-->
+                                <a href="#"><img width="20" height="20" src="${team_image($one['image3'])}" /></a>
+                              <!--{/if}-->  
+                                <!--{if $one['image4']}-->
+                                <a href="#"><img width="20" height="20" src="${team_image($one['image4'])}" /></a>
+                              <!--{/if}-->  
+                              
+                            </td>
+                            <td><a title="{$one['reply_cotent']}">${mb_strimwidth($one['reply_cotent'],0,40)}...</a></td>
+						</tr>	
+					<!--{/loop}-->
+						<tr><td colspan="7">{$pagestring}</td></tr>
+                    </table>
+				</div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->

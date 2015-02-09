@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<script src="style/jquery-1.9.1.min.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+
+</head>
+
+<body mon="position=list">
+
+<!--{include mb_header}-->
+
+
+
+
+<div id="j-goods-container">
+
+<section class="w-goods">
+
+  <div style="overflow:hidden; text-align:center; line-height:40px; padding:0 10px;color:#746d65;background:#efefef">
+     <span style="margin:0 15px;">编号</span>
+     <span style="margin:0 15px;">{$INI['system']['abbreviation']}劵密码</span>
+     <span style="margin:0 15px;">时间</span>
+  </div>
+ 
+ </section>
+<!--{loop $coupon $index $one}-->
+
+<section class="w-goods">
+
+  <div style="overflow:hidden; text-align:center; line-height:40px; padding:0 10px;color:#746d65;${$index%2?'background:#f7f6f4':''}">
+     <span style="margin:0 15px;">${$index + 1}</span>
+     <span style="margin:0 15px;">　　{$one['secret']}</span>
+     <span style="margin:0 15px;">　${date('H-i',$one['consume_time'])}</span>
+  </div>
+ 
+ </section>
+  <!--{/loop}-->  
+</div>
+
+
+
+
+
+
+<!--{include mb_footer}-->
+
+
+</body></html>

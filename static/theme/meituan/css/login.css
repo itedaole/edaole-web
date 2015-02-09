@@ -1,0 +1,128 @@
+﻿@charset "utf-8";
+/* website    : 0750团购网 0750.tuanzhang.cc
+   author     : 林嘉文 Gavin Lin
+   creatTime  : 03.08 2014
+   saveFrom   : ip-42.121.84.115
+   @face-color: #2aa143,#1f9537,#555
+   @face-style: login | sign | 重做mods 
+ */
+
+/* 全局 */
+style ,script{display:none;}
+body ,ul ,li ,ol ,input ,select ,option ,textarea{margin:0; padding:0; font-style:normal; word-break:break-all; font-weight:normal; font-family:"微软雅黑","YaHei","Microsoft YaHei","宋体"; font-size:12px; color:#000;}
+body{background-color:#f2f2f2;}
+div{margin:0 auto; overflow:hidden; height:auto;}
+ul ,ul li{list-style:none; overflow:hidden; height:auto;}
+input ,select ,option ,textarea{outline:none;}
+a{text-decoration:none; color:#868686; outline:none;}
+a:hover{color:#303030;}
+img{border:none;}
+.red{color:#c00;}
+.orange{color:#ff6600;}
+.green{color:#1f9537;}
+.blue{color:#0594b8;}
+.pink{color:#fa8772;}
+.floatleft{float:left;}
+.floatright{float:right;}
+
+body#login{background:none; background-color:#fff; position:relative; z-index:1;}
+body#login .loginPage{width:1000px; overflow:hidden;}
+.lp .logo{margin:40px 20px; overflow:hidden; text-align:left; position:relative; z-index:1;}
+.lp .logo a.l{display:block; background:url(img/logo.png) no-repeat;_background-image:url(img/logo.jpg); width:220px; height:57px; overflow:hidden; text-indent:-9999px;}
+.lp .loginPanel{overflow:hidden;}
+.lp .lpl .special{float:left; display:inline; margin:20px; background:url(img/phone.jpg) no-repeat; width:406px; height:384px; position:relative; z-index:2;}.lp .lpl .special .code{width:140px; height:140px; border:3px solid #fff; background-color:#fff; overflow:hidden; position:absolute; z-index:2; top:68px; left:230px;}.lp .lpl .special .code img{width:140px; height:140px;}
+.lp .lpl .special .fontInto{position:absolute; left:0; top:40px; width:150px; word-break:break-all; font-size:15px; color:#aaa; text-align:right;}.lp .lpl .special .fontInto b{font-size:17px;}.lp .lpl .special .fontMovie{position:relative; z-index:1; animation:weixinFont 1s; -webkit-animation:weixinFont .75s;}.lp .lpl .special .fontInto p{margin:13px 0 0 0; line-height:1.6;}
+.lp .lpl .special .font{background-color:#36b451; color:#fff; font-weight:bold; font-size:13px; padding:5px 10px; border:1px solid #2da447; text-align:center; position:absolute; z-index:2; top:218px; left:240px;}
+.lp .lpl .special .btn{position:absolute; z-index:2; overflow:visible; top:252px; left:240px;}.lp .lpl .special .btn a{display:block; width:124px; height:29px; line-height:2; background-color:#ffeec8; border:1px solid #2da447; color:#8d764a; border-radius:5px; font-size:14px; box-shadow:0 1px 0 rgba(255,255,255,.3) inset; -moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset; -webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset; font-weight:bold; text-align:center;}
+.lp .lpl .special .moviePune{width:170px; height:266px; overflow:hidden; position:absolute; z-index:10; top:54px; left:217px; display:none;}
+.lp .lpl .special .moviemask{background-color:#000; background-color:transparent \9; opacity:.3; -webkit-opacity:.3; -moz-opacity:.3; filter:alpha(opacity=30); position:absolute; z-index:9; top:54px; left:217px; width:170px; height:266px; overflow:hidden; display:none;}
+.lp .lpl .special .movie{position:relative; z-index:11; font-weight:700; color:#ff6600; animation:weixin 1s; -webkit-animation:weixin 1s; opacity:1; background:url(img/phoneSur.png) no-repeat; background-image:none \9; width:158px; height:235px; margin-top:13px; display:none;}
+@keyframes weixin
+{
+0%  {left:0px; top:50px; opacity:0;}
+100% {left:0px; top:0px; opacity:1;}
+}
+@-webkit-keyframes weixin
+{
+0%  {left:0px; top:50px; opacity:0;}
+100% {left:0px; top:0px; opacity:1;}
+}
+@keyframes weixinFont
+{
+0%  {left:0px; top:-50px; opacity:0;}
+100% {left:0px; top:0px; opacity:1;}
+}
+@-webkit-keyframes weixinFont
+{
+0%  {left:0px; top:-50px; opacity:0;}
+100% {left:0px; top:0px; opacity:1;}
+}
+
+.lp .lpl .login{float:left; margin:20px 20px 0 125px; display:inline; width:400px; height:auto;}
+.lp .lpl .login .input ,.lp .lpl .login .input ul{overflow:hidden;}
+.lp .lpl .login .input ul li{background-color:#fff; border-radius:5px; border:1px solid #dddddd; margin:15px; padding:5px 10px; overflow:hidden; font-size:18px; color:#555;}.lp .lpl .login .input ul li.noStyle{border:none; border-radius:0;}.lp .lpl .login .input ul li.font{font-size:14px; color:#777;}
+.lp .lpl .login .input ul li .img{width:30px; height:30px; vertical-align:middle; opacity:.3; -webkit-opacity:.3; -moz-opacity:.3; filter:alpha(opacity=30);}
+.lp .lpl .login .input ul li .text{font-size:18px; color:#676767; border:none; background:none; height:28px; padding-left:5px; width:310px; vertical-align:middle;}
+.lp .lpl .login .input ul li.focus{border-color:#555;}
+.lp .lpl .login .input ul li.font *{font-style:normal; font-weight:normal; margin:0; padding:0;}
+.lp .lpl .login .input ul li.font i{display:block; float:left; overflow:visible; padding-right:15px;}.lp .lpl .login .input ul li.font i.fr{float:right; padding:0;}.lp .lpl .login .input ul li.font i a{color:#1f9537;}.lp .lpl .login .input ul li.font i a:hover{border-bottom:1px solid #1f9537;}.lp .lpl .login .input ul li.font i input{margin-right:3px;}
+.lp .lpl .login .input ul li a.loginBtn{height:36px; line-height:36px; text-align:center; display:block; overflow:hidden; background-color:#1f9537; border:1px solid #1b8a31; color:#fff; font-weight:bold; font-size:16px; border-radius:5px; box-shadow:0 1px 0 rgba(255,255,255,.3) inset,1px 1px 4px #CCC; -moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset,1px 1px 4px #CCC; -webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset,1px 1px 4px #CCC;}
+.lp .lpl .login .input ul li a.loginBtn:hover{background-color:#36b451; border:1px solid #1f9537;}
+.lp .lpl .login .input ul li input.loginBtn{height:36px; text-align:center; display:block; overflow:hidden; background-color:#1f9537; border:1px solid #1b8a31; color:#fff; font-weight:bold; font-size:16px; border-radius:5px; box-shadow:0 1px 0 rgba(255,255,255,.3) inset,1px 1px 4px #CCC; -moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset,1px 1px 4px #CCC; -webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset,1px 1px 4px #CCC; width:100%; cursor:pointer;}
+.lp .lpl .login .input ul li input.loginBtn:hover ,.lp .lpl .login .input ul li input.loginBtn:active{background-color:#36b451; border:1px solid #1f9537;}
+.lp .lpl .login .input ul li.func{font-size:13px; color:#999; border-top:1px dotted #dcdcdc;}.lp .lpl .login .input ul li.func a{display:inline; display:inline-block; zoom:1; padding-right:20px; color:#999; font-size:13px;}.lp .lpl .login .input ul li.func a:hover{color:#555;}.lp .lpl .login .input ul li.func em{display:inline; display:inline-block; zoom:1; background:url(img/3block.png) no-repeat; width:16px; height:17px; margin-right:3px;}.lp .lpl .login .input ul li.func em.sinaweibo{background-position:-34px -16px;}.lp .lpl .login .input ul li.func a *{vertical-align:middle;}
+#login .old .login .area{overflow:hidden;}
+#login .old .login .area div{float:left;}
+#login .old .login .area .font{overflow:hidden; height:27px; line-height:27px; background-color:#f7f7f7; border:1px solid #c3c3c3; border-right-color:#e9e9e9; padding-left:11px; padding-right:5px; cursor:default; font-size:12px; width:70px;}
+#login .old .login .area .font em{background:url(img/icon.png) 0px 0px no-repeat; padding:0px 7px; margin-left:5px; display:inline;}
+#login .old .login .area .font em.password{background-position:0px -29px;}
+#login .old .login .area .input{border:1px solid #c3c3c3; height:27px; line-height:27px; background:url(img/icon.png) 0px -509px repeat-x; padding-left:10px; padding-right:10px; width:240px;}
+#login .old .login .area .input input{background:none; border:none; width:240px; margin-top:3px;}
+
+body#login .foot{width:1000px; overflow:hidden; color:#999; text-align:center; padding:10px 0; margin-top:50px; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}body#login .foot p{margin:10px 0;}body#login .foot p a{display:inline; margin:0 10px; font-size:13px; color:#999;}body#login .foot p a:hover{color:#555; border-bottom:1px solid #555;}
+
+.lp .lpl .special .m2{width:170px; height:266px; overflow:hidden; position:absolute; z-index:10; top:54px; left:217px;}
+.lp .lpl .special .m2 .bg{width:170px; height:266px; background-color:#000; opacity:.7; -webkit-opacity:.7; -moz-opacity:.7; filter:alpha(opacity=70); width:170px; height:266px; overflow:hidden;}
+.lp .lpl .special .m2 .text{color:#fff; position:absolute; z-index:10; background-color:transparent; width:170px; height:50px; left:0; top:50%; margin-top:-25px; font-weight:bold; text-align:center; overflow:hidden;}
+.lp .lpl .special .m2 .text p{margin:0; font-size:16px; line-height:1.6;}
+
+#login .bdc .login{margin-left:0px; padding-left:30px; background-color:#fff; padding:20px 30px 10px 30px;}
+#login .login .area{overflow:hidden;}
+#login .login .area div{float:left;}
+#login .login .area .font{overflow:hidden; height:27px; line-height:27px; background-color:#f7f7f7; border:1px solid #c3c3c3; border-right-color:#e9e9e9; padding-left:11px; padding-right:5px; cursor:default; font-size:12px; width:70px;}
+#login .login .area .font em{background:url(img/icon.png) 0px 0px no-repeat; padding:0px 7px; margin-left:5px; display:inline;}
+#login .login .area .font em.password{background-position:0px -29px;}
+#login .login .area .input{border:1px solid #c3c3c3; height:27px; line-height:27px; background:url(img/icon.png) 0px -509px repeat-x; padding-left:10px; padding-right:10px; width:240px;}
+#login .login .area .input input{background:none; border:none; width:240px; margin-top:3px;}
+.bdc .lpl{width:756px;}
+.bdc .login{border:1px solid #dddddc;}
+.bdc .chooseType{float:left; padding-left:25px; width:249px; overflow:visible; height:200px; margin-top:40px; position:relative; z-index:1;}
+.bdc .chooseType .ctt{position:absolute; z-index:1; top:-15px; right:-1px;}
+.bdc .ct a{margin-top:10px; display:block; padding:10px 15px; background-color:transparent; color:#bbb; border:1px solid #f7f7f7; border-right:1px solid #dddddc; font-size:18px; text-align:center;}
+.bdc .ct a:hover ,.bdc .ct a.active{background-color:#fff; color:#127d49; border:1px solid #dddddc; border-right:1px solid #fff;}
+
+.su .lpl{width:906px;}
+.su .lpl .login .input ,.su .lpl .login .input ul{overflow:visible;}
+.su .lpl .login .input ul li.lo{width:500px;}
+.su .login ul li.lo .forget{font-size:12px; padding-left:15px; height:29px; line-height:29px; color:#cbcbcb;}
+#login .su .login{width:550px;}
+#login .su .login ul li.lo .input ,#login .su .login ul li.lo .input input{width:190px;}
+#login .su .signThis{background-color:transparent; border:none; border-right:1px solid #dddddc;}
+.su .login ul li.lo .select1{width:188px; margin-top:3px;}
+.su .login ul li.lo input.code{display:block; width:100px; text-align:center; border:1px solid #dedede; background-color:#f2f2f2; height:29px; line-height:2; font-size:12px; cursor:pointer;}
+#login .su .signThis ul li.signup_selector{border-bottom:1px solid #dedede;}
+.su .signThis ul li.ss *{display:block; float:left; font-style:normal;}
+.su .signThis ul li.ss a{padding:5px 10px; margin-left:7px;}
+.su .signThis ul li.ss span{height:34px; line-height:34px;}
+.su .signThis ul li.ss a:hover ,.su .signThis ul li.ss a.focus{background-color:#127d49; color:#fff;}
+.su .signup{font-size:14px;}
+.su .signup a{display:block; width:100px; text-align:center; border:1px solid #dedede; background-color:#f2f2f2; height:36px; line-height:36px; font-size:15px; color:#333; padding:0;}
+.su .signup a:hover{background-color:#e8e8e8; color:#000;}
+.su .signup a.returnLogin{border:1px solid #f68600; background-color:#ff9214; color:#fff;}
+.su .signup a.returnLogin:hover{background-color:#ffa500; border:1px solid #f69f00;}
+
+body#login .bangding .lpl .special{margin:0 auto; float:none; clear:both; display:block; overflow:visible;}
+.bangding .lpl .special .fontInto{position:absolute; left:-102px; top:77px; width:250px; color:#aaa; text-align:left; border:1px solid #dddddc; border-radius:5px 0 0 5px; background-color:#fff; padding:10px;}.lp .lpl .special .fontInto p{margin:0;}
+.bangding .logo span.pos{position:absolute; z-index:1; right:0; bottom:5px; color:#bbb;}.bangding .logo span.pos a{color:#127d49;}.bangding .logo span.pos a:hover{border-bottom:1px solid #127d49;}.bangding .logo span.pos a.grey{color:#bbb; border:none;}
+
+#login .error{background-color:#fff2f2; border:1px solid #ff8080; color:#666666; font-size:14px; white-space:nowrap; background:url(img/error.gif) 5px 5px no-repeat; height:26px; line-height:26px; padding:0 25px;}

@@ -1,0 +1,20 @@
+<div id="order-pay-dialog" class="order-pay-dialog-c" style="width:320px;">
+<h3><span id="order-pay-dialog-close" class="close" onclick="return X.boxClose();">关闭</span>回复</h3>
+	
+	<table width="96%" class="coupons-table">
+		
+       
+		<tr><td nowrap align="right" valign="top"></td><td>
+			<textarea style="width:280px;height:60px;" class="f-textarea" name="comment_content" id="dialog_comment_content">${htmlspecialchars($comment['reply_cotent'])}</textarea>
+		</td></tr>
+		<tr><td></td><td><input type="submit" value="确定" class="formbutton" onclick="X.misc.ordercomment();" /></td></tr>
+	</table>
+</div>
+<script type="text/javascript">
+X.misc.ordercomment = function() {
+
+	var t = jQuery('#dialog_comment_content').val();
+
+	if (t) return !X.get(WEB_ROOT + '/ajax/comment.php?action=editcomment&id={$comment['id']}&t='+encodeURIComponent(t));
+};
+</script>

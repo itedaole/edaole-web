@@ -1,0 +1,36 @@
+<!--{include manage_html_header}-->
+<!--{if $INI['system']['editor'] == 'xh'}-->
+<script type="text/javascript" src="/static/js/xheditor/xheditor.js"></script>
+<!--{else}-->
+<script type="text/javascript" src="/static/js/kindeditor/kindeditor-min.js"></script>
+<!--{/if}--> 
+<div id="hdw">
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+background="/static/images/header_bg.jpg" border=0>
+  <TR height=56>
+    <TD width=260><!-- <IMG height=56 src="/static/images/header_left.jpg" 
+    width=260> --></TD>
+    <TD style="FONT-WEIGHT: bold; COLOR: #fff; PADDING-TOP: 20px" 
+      align=middle>当前用户：{$login_user['username']} &nbsp;&nbsp;
+      <A style="COLOR: #fff" 
+      href="/index.php" target=main>查看网站</A> &nbsp;&nbsp; 
+      <!--{if is_manager()}-->
+      <A style="COLOR: #fff" 
+      onclick="if (confirm('确定要退出吗？')) return true; else return false;" 
+      href="/manage/logout.php" target=_top>退出系统</A> 
+      <!--{/if}-->
+    </TD>
+    <TD align=right width=268><!-- <IMG height=56 
+      src="/static/images/header_right.jpg" width=268> --></TD></TR></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#1c5db6 height=4>
+    <TD></TD></TR></TABLE>
+</div>
+
+<!--{if $session_notice=Session::Get('notice',true)}-->
+<div class="sysmsgw" id="sysmsg-success"><div class="sysmsg"><p>{$session_notice}</p><span class="close">关闭</span></div></div> 
+<!--{/if}-->
+<!--{if $session_notice=Session::Get('error',true)}-->
+<div class="sysmsgw" id="sysmsg-error"><div class="sysmsg"><p>{$session_notice}</p><span class="close">关闭</span></div></div> 
+<!--{/if}-->

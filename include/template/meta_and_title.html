@@ -1,0 +1,18 @@
+<!--{if !$pagetitle||$request_uri=='index'}-->
+	<title>{$INI['system']['sitename']} - {$INI['system']['sitetitle']}|{$city['name']}购物|{$city['name']}团购|{$city['name']}打折</title>
+<!--{else}-->
+	<title>{$pagetitle} | {$INI['system']['sitename']} - {$INI['system']['sitetitle']} |{$city['name']}购物|{$city['name']}团购|{$city['name']}打折{$INI['system']['subtitle']}</title>
+<!--{/if}-->
+
+<!--{if $seo_description}-->
+	<meta name="description" content="{$seo_description}" />
+<!--{elseif $team}-->
+	<meta name="description" content="${mb_strimwidth(strip_tags($team['title'] .', '. $team['summary'] .', '. $team['systemreview']), 0, 320)}" />
+<!--{else}-->
+	<meta name="description" content="{$INI['system']['description']}" />
+<!--{/if}-->
+<!--{if $seo_keyword}-->
+	<meta name="keywords" content="{$seo_keyword}，{$city['name']}购物，{$city['name']}团购" />
+<!--{else}-->
+	<meta name="keywords" content="{$INI['system']['keywords']}" />
+<!--{/if}-->

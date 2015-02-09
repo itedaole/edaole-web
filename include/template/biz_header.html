@@ -1,0 +1,44 @@
+<!--{include biz_html_header}-->
+<script type="text/javascript" src="/static/js/xheditor/xheditor.js"></script>
+<div id="hdw">
+    <div class="biztop" style="background:none;">
+          <div id="bd" class="cf">
+              <h3 style="color:#666;">{$INI['system']['abbreviation']}商家管理中心</h3>
+              
+              <p><a style="color:#666;" href="/index.php">{$INI['system']['abbreviation']}首页</a>
+              
+                            
+              </p>
+          </div>
+          
+    </div>
+</div>
+
+
+<div style=" margin-top:10px; margin-bottom:10px; line-height:42px; background:#0070bb">
+
+<div id="hd">
+    <ul class="nav cf" style="float:left">
+    
+    ${current_biz()}<!--{if is_partner()}--><li><a id="verify-coupon-id" href="javascript:;">消费登记</a></li><!--{/if}-->
+    
+
+    
+    </ul>
+    <ul class="nav cf" style="float:right">
+           <!--{if is_partner()}-->
+                            <li>欢迎您，{$login_partner['title']}！</li>
+                            <li><a href="/biz/logout.php">退出</a></li>
+                            <!--{/if}-->
+    </ul>
+  <div style="clear:both"></div>
+</div>
+
+</div>
+
+<!--{if $session_notice=Session::Get('notice',true)}-->
+<div class="sysmsgw" id="sysmsg-success"><div class="sysmsg"><p>{$session_notice}</p><span class="close">关闭</span></div></div> 
+<!--{/if}-->
+<!--{if $session_notice=Session::Get('error',true)}-->
+<div class="sysmsgw" id="sysmsg-error"><div class="sysmsg"><p>{$session_notice}</p><span class="close">关闭</span></div></div> 
+<!--{/if}-->

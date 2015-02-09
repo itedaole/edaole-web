@@ -1,0 +1,5 @@
+此接口可以通过http://tuan.com/app/api.php?s=Pages/index/page/xxx.html 来访问
+其中xxx为此目录下文件，客户端访问会优先查找有无对应平台的页面，如果没有在找xxx的模板
+例如ios访问help页面，会先查找help_ios.html,如果没有再查找help.html
+如果不需要做平台区分，可以直接只放一个版本，例如只放help.html
+

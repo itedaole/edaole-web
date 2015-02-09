@@ -1,0 +1,5 @@
+<?php
+$value = array (
+  'pay' => '',
+);
+?>

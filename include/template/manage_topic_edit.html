@@ -1,0 +1,87 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+     <!--{include manage_left_menu}-->
+    <div class="right_main">
+<div id="bd" class="cf">
+
+<div id="topic">
+
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+       
+            <div class="box-content">
+                <div class="head"><h2>编辑专题  <a href="/manage/topic/index.php">专题列表</a></h2></div>
+                <div class="sect">
+                    <form id="login-user-form" method="post" action="/manage/topic/edit.php?id={$topic['id']}" enctype="multipart/form-data" class="validator">
+					<input type="hidden" name="id" value="{$topic['id']}" />
+						                     <div class="field">
+                            <label>专题名称</label>
+                            <input type="text" size="30" name="title" id="topic-create-title" class="f-input f-hint" value="{$topic['title']}" require="true" datatype="require" />
+                        </div>
+						
+					  <div class="field">
+                            <label>专题商品</label>
+							<textarea name="team_id" cols="80" rows="6">{$topic['team_id']}</textarea>
+							<div style="padding-left:120px;color:#009966">填写商品ID用英文逗号隔开例如：12,65,45,32</div>
+                        </div>
+
+						<div class="field">
+							<label>专题顶部背景</label>
+							<input type="file" size="30" name="upload_bgimage" id="topic-create-image" class="f-input f-hint" />
+							<span class="hint">图片高度420px宽度1000px</span>
+							<!--{if $topic['bgimage']}--><span class="hint">${team_image($topic['bgimage'])}</span><!--{/if}-->
+						</div>
+                        
+                        	<div class="field">
+							<label>专题缩略图</label>
+							<input type="file" size="30" name="upload_image" id="topic-create-image" class="f-input f-hint" />
+							<span class="hint">图片高度184px宽度195px</span>
+							<!--{if $topic['image']}--><span class="hint">${team_image($topic['image'])}</span><!--{/if}-->
+						</div>
+                        
+                                  <div class="field">
+						<label>首页热门</label>
+
+								<input type="checkbox" class="allowrefund" name="is_index" value="Y" <!--{if $topic['is_index']=='Y'}-->checked<!--{/if}-->/>&nbsp;是&nbsp;&nbsp;					 
+					</div>
+                         	<div class="field">
+						<label>是否显示</label>
+
+								<input type="checkbox" class="allowrefund" name="display" value="Y" <!--{if $topic['display']=='Y'}-->checked<!--{/if}-->/>&nbsp;是&nbsp;&nbsp;					 
+					</div>
+                    
+                           	<div class="field">
+						<label>排序</label>
+						<input type="text" size="5" name="sort_order" id="team-create-title" class="date" value="{$topic['sort_order']}" />
+					</div>
+					
+   
+       <!--                 <div class="field">
+					    <label>主题颜色</label>
+						<input style="width:100px;" type="text" size="30" name="sale1" id="topic-create-sel1" class="f-input f-hint" value="{$topic['sale1']}" maxLength="11"  onfocus="colordialog()"/>
+						<label>字体颜色</label>
+						<input style="width:100px;" type="text" size="30" name="sale2" id="topic-create-sel2" class="f-input f-hint" value="{$topic['sale2']}" maxLength="11"  onfocus="colordialog()"/>
+						<label>边框颜色</label>
+						<input style="width:100px;" type="text" size="30" name="sale3" id="topic-create-sel3" class="f-input f-hint" value="{$topic['sale3']}" maxLength="11"  onfocus="colordialog()"/>
+                        </div>  --> 
+   
+                        <div class="act">
+                            <input type="submit" value="编辑" name="commit" id="topic-submit" class="formbutton"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+	</div>
+
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->

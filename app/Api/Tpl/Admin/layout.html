@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html len='zh-cn'>
+<meta charset="utf-8">
+<head>
+<title>Admin Panel</title>
+</head>
+<style>
+.ztNav
+{
+background: RGB(248, 248, 248);
+width: 150px;
+height: 1000px;
+}
+.ztNav li a
+{
+  height:120px;
+  padding-top: 100px;
+  display: block;
+}
+.ztNav li a img
+{
+  margin-top: 20px;
+  margin-left: 25px;
+}
+.ztContainer
+{
+width: auto;
+/*float: left;*/
+}
+</style>
+
+<script src="__TMPL__Res/js/jquery-2.0.3.min.js"></script>
+<script src="__TMPL__Res/js/bootstrap.min.js"></script>
+<link href="__TMPL__Res/css/bootstrap.min.css" rel="stylesheet">
+<body>
+  <div>
+    <nav class="navbar navbar-default" style="margin-bottom: 0px" role="navigation">
+      <div class="row">
+        <div class="col-md-3 pull-left">
+          <span class="glyphicon glyphicon-fire pull-left" style="font-size: 36px; margin-left: 20px"></span>
+          <span class="pull-left" style="font-size: 32px;margin-left:5px">客户端后台</span>
+        </div>
+        <div class="col-md-3 pull-right">
+        <div style="margin-top:8px;margin-right:20px" class ="pull-right" >
+              <a type="button" class="btn btn-info" href="./../manage/logout.php">登出</a>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div>
+      <div class="ztNav pull-left">
+        <!-- left nav  -->
+      <ul class="nav" style="width: 100%;">
+        <li class="active">
+          <a href="?s=Admin&p=index" style="background:#1ABC9C;">
+            <img alt="" title="" src="__TMPL__Res/imgs/00@2x.png" width="60" height="60">
+          </a>
+        </li>
+        <li><a href="?s=Admin&p=index" style="background:#9B59B6">
+            <img alt="" title="" src="__TMPL__Res/imgs/02@2x.png" width="60" height="60">
+        </a></li>
+        <li>
+          <a href="?s=Admin&p=settings" style="background:#E74C3C">
+              <img alt="" title="" src="__TMPL__Res/imgs/03@2x.png" width="60" height="60">
+          </a>
+        </li>
+      </ul>
+
+      </div>
+      <div class="ztContainer">
+        <!-- right container -->
+        {__CONTENT__}
+      </div>
+    </div>
+</body>
+</html>

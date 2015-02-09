@@ -1,0 +1,107 @@
+<!--{include manage_header}-->
+
+
+<div id="bdw" class="bdw">
+<!--{include manage_left_menu}-->
+<div class="right_main">
+<div id="bd" class="cf">
+<div id="ad">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_market('ad')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+        
+            <div class="box-content">
+                <div class="head">
+				<!--{if $id}-->
+					<h2>广告编辑</h2>Editorial
+					<ul class="filter">${current_market_ad()}</ul>
+				<!--{else}-->
+					<h2>添加广告</h2>
+					<ul class="filter">${current_market_ad('adedit')}</ul>
+				<!--{/if}-->
+				</div>
+                <div class="sect">
+					<form id="-user-form" method="post" action="/manage/market/adedit.php?id={$ad['id']}" enctype="multipart/form-data" class="validator">
+						<input type="hidden" name="id" value="{$ad['id']}" />
+
+						<div class="field">
+							<label>广告标题</label>
+							<input type="text" size="30" name="title" id="title" class="f-input" value="${htmlspecialchars($ad['title'])}" datatype="require" require="true" />
+						</div>
+						
+						<div class="field">
+							<label>广告位置</label>
+							<select name="type" class="f-input" style="width:260px;">
+                            
+                                 <option value="{$ad['type']}">
+                                 
+                                 <!--{if $ad['type'] == 2}-->
+							    首页轮播广告（713*197）
+							<!--{else if $ad['type'] == 3}-->
+							   首页轮播右上广告（240*98）
+							<!--{else if $ad['type'] == 4}-->
+							   首页轮播右下广告（240*98）
+                               <!--{else if $ad['type'] == 1}-->
+							   其他位置
+							<!--{else}-->
+							   --------请选择--------
+							<!--{/if}-->
+                                 </option>
+								  <option value="2">首页轮播广告（713*198）</option>
+							     
+								 <option value="3">首页轮播右上广告（240*98）</option>
+								 
+								 <option value="4">首页轮播右下广告（240*98）</option>
+								  
+								 <option value="1">手机下载广告</option>
+							</select>
+						</div>
+						<div class="field">
+							
+							<label>选择图片</label>
+							<div class="adimg" >
+							<!--{if $ad['image']}-->
+								<!--${
+								$image = team_image($ad['image']);
+								$size = getimagesize($image);
+								if ($size[0]) $width = $size[0] >700  ? 700 : $size[0];
+
+								}-->
+							<img  src="${team_image($ad['image'])}" width="{$width}"><br/>
+							<span class="adimghint">${team_image($ad['image'])}</span><br/><!--{/if}--><input type="file" size="30" name="image" id="image" class="f-input" /></div>
+						</div>
+						<div class="field">
+							<label>图片链接</label>
+							<input type="text" size="30" name="link" id="link" class="f-input" value="${htmlspecialchars($ad['link'])}" />
+							<span class="inputtip">若无链接，请留空</span>
+						</div>
+						<div class="field">
+							<label>显示排序</label>
+							<input type="text" size="10" name="displayorder" id="displayorder" class="number" value="{$ad['displayorder']}" datatype="number"/>
+							<span class="inputtip">请填写数字，数值大到小排序，显示靠前的设置较大值</span>
+						</div>
+						<div class="field">
+							<label>是否开启</label>
+							<select name="available" class="f-input" style="width:160px;">${Utility::Option($availables, $ad['available'])}</select>
+						</div>
+                        <div class="field">
+						<input type="submit" value="好了，提交" name="" id="leader-submit" class="formbutton" style="margin:10px 0 0 120px;"/>
+                        </div>
+					</form>
+				</div>
+            </div>
+ 
+        </div>
+	</div>
+
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->

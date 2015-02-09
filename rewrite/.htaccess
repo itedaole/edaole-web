@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(\w+)$ rewrite.php
+RewriteRule ^(\w+)/(deals|seconds|goods|partners)$ rewrite.php
+RewriteRule ^(team|partner)/(\d+).html$ rewrite.php
+</IfModule>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html len='zh-cn'>
+<meta charset="utf-8">
+<head>
+<link rel = "Shortcut Icon" href="__TMPL__/Public/img/icon.ico">
+<title>Admin login</title>
+</head>
+<script src="__TMPL__Res/js/jquery-2.0.3.min.js"></script>
+<script src="__TMPL__Res/js/bootstrap.min.js"></script>
+<link href="__TMPL__Res/css/bootstrap.min.css" rel="stylesheet">
+<body>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+  <center  style='margin-top: 35%'>
+    <fieldset>
+      <div id="legend" class="">
+        <legend >
+          <h1>客户端管理后台</h1>
+        </legend>
+      </div>
+    <div class="control-group">
+          <label class="control-label"></label>
+          <div class="controls">
+            <a id="loginbtn" href="./../manage/login.php"  target="_blank" class="btn btn-default" data-loading-text="正在加载...">登 录</a>
+          </div>
+        </div>
+    </fieldset>
+  </center>
+</div>
+</div>
+<div class="col-md-3"></div>
+   <footer class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <center style="margin-top: 15px">
+      <small>Copyright © 1999-2014 <a target="_blank" href = "http://weibo.com/bcker">iBcker</a></small>
+    </center>
+    </footer>
+</body>
+</html>
+
+<script>
+	$(function(){
+		$('#loginbtn').click(function(event) {
+			alert('登录完后回来刷新此页面即可登录');
+			$(this).text('请尝试刷新页面完成登录');
+			$(this).attr('disabled','disabled');
+			return true;
+		});
+	});
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+<script src="style/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/user_css_0_8975013.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+
+</head>
+
+
+
+
+
+
+<body mon="position=order_list_local" id="orders">
+
+<!--{include m_header}-->
+
+             <menu>
+      <ul>
+       <li gaevent="InnerLink|Click|touch/orders/list/paid" ><a href="myorder.php">订单</a></li><!--
+                    --><li gaevent="InnerLink|Click|touch/orders/list/unpaid"  ><a href="mycoupon.php">团购卷</a></li><!--
+                    -->
+     </ul>
+            </menu>
+            
+         
+
+<h2>团购项目</h2>
+<li style="color:#F00">订单状态：交易成功</li>
+
+<li>项目名称：  <!--${$partner_id = $team['partner_id'];$partner = Table::Fetch('partner',$partner_id);}-->
+                <a href="#">{$partner['title']}${mb_strimwidth($team['team_jybt'],0, 34,'...')}</a></li>
+<li>订单编号：{$order['id']}</li>
+<li>下单时间：${date('Y-m-d H:i:s',$order['create_time'])}</li>
+<li>付款时间：${date('Y-m-d H:i:s', $order['pay_time'])}</li>
+
+<h2>订单信息</h2>
+<li>项目单价：${moneyit($order['price'])}</li>
+<li>购买数量：{$order['quantity']}</li>
+<li>代金券抵：${moneyit($order['card'])}</li>
+<li>快递费用：${$express?moneyit($team['fare']):0}</li>
+<li>总计费用：${moneyit($order['origin'])}</li>
+
+<h2>{$INI['system']['couponname']} (共${count($coupons)}张)</h2>
+
+<!--{if $team['delivery']=='coupon'}-->
+<table cellspacing="0" cellpadding="0" border="0" class="data-table">
+    <tr>
+      <td align="right">      <!--{if empty($coupons)}-->{$INI['system']['couponname']}将在团购成功后，由系统自动发放<!--{/if}--><!--{loop $coupons $one}--><li>{$one['id']} - {$one['secret']}</li><!--{/loop}-->    </tr>
+    <tr>
+      <td align="right">       </tr>
+</table>
+<!--{elseif $team['delivery']=='express'}-->
+<table cellspacing="0" cellpadding="0" border="0" class="data-table">
+    <tr>
+        <td align="right">快递：</td>
+	<!--{if $order['express_id']}-->
+        <td>{$option_express[$order['express_id']]}：{$order['express_no']}</td>
+	<!--{else}-->
+        <td class="other-coupon">请耐心等待发货</td>
+	<!--{/if}-->
+    </tr>
+    <tr>
+        <td align="right">收件人：</td>
+        <td>{$order['realname']}</td>
+    </tr>
+    <tr>
+        <td align="right">收件地址：</td>
+        <td>{$order['address']}</td>
+    </tr>
+    <tr>
+        <td align="right">手机号码：</td>
+        <td>{$order['mobile']}</td>
+    </tr>
+</table>
+<!--{elseif $team['delivery']=='pickup'}-->
+
+<!--{/if}-->
+
+<!--{include m_footer}-->
+</body>
+
+</html>

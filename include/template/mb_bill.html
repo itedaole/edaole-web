@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<script src="style/jquery-1.9.1.min.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+
+</head>
+
+<body mon="position=list">
+
+
+
+
+
+
+<div id="j-goods-container">
+
+
+
+
+<style type="text/css">
+.bill{ border:none;}
+.bill a{ font-weight:bold;color:#000}
+.bill_n a{ font-weight:bold;color:#F00}
+.bill_list{overflow:hidden; text-align:center; line-height:40px;color:#746d65;}
+.bill_list span{margin: 0 20px;padding: 10px 0;}
+</style>
+
+ <section class="w-goods_act bill">
+    <a>余额</a>
+    <a>总销售额</a>
+    <a>已提款</a>
+ </section>
+  <section class="w-goods_act bill_n">
+    <a>￥{$yue_price} 元</a>
+    <a>￥{$all_bill_price} 元</a>
+    <a>￥{$bill_price} 元</a>
+ </section>
+
+<a style="display:block">
+  <div class="bill_list" style="background:#efefef">
+     <span>申请日期</span>
+     <span>状态</span>
+       <span>结算金额</span>
+  </div>
+</a>
+
+
+
+
+<!--{loop $partner_bill $index $one}-->
+
+<section class="w-goods">
+ <a style="display:block;${$index%2?'background:#f7f6f4':''}" href="bill_info.php?partner_id={$partner_id}&id={$one['id']}">
+  <div class="bill_list">
+        <span>${date('Y-m-d',$one['add_time'])}</span>
+        <span>   <!--{if $one['bill_status'] == 0}-->
+                                 审核中
+                             <!--{elseif $one['bill_status'] == 1}-->
+                                 已结算
+                             <!--{else}-->
+                                 已拒绝
+                             <!--{/if}--></span>
+       <span>{$one['price']}</span>
+
+  </div>
+  </a>
+ </section>
+  <!--{/loop}-->  
+</div>
+
+
+
+
+
+
+
+
+
+</body></html>

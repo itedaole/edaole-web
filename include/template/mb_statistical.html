@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<script src="style/jquery-1.9.1.min.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+
+</head>
+
+<body mon="position=list">
+
+
+<div id="j-goods-container">
+
+<!--{loop $teams $tindex $team}-->
+
+<section class="w-goods " mon="action=click&amp;type=item">
+ <a href="statistical_info.php?partner_id={$partner_id}&id={$team['id']}" class="clearfix">
+ <div class="img-wrapper">
+ <span class="tag-free-reservation"></span>
+ <img style="visibility: visible;" src="${team_image($team['image'], true)}" height="70" width="100">
+ </div>
+ <ul>
+ <li class="title"><span class="store "></span>
+ <span class="item-name" style="color:#292929;">{$team['title']}</span>
+ </li>
+ <li class="others"><ins>${moneyit($team['team_price'])}</ins><span class="slash"></span>
+ <span class="old-price">${date('Y-m-d',$team['begin_time'])}</span>
+
+ </li>
+  <li class="info" style="color:#a8a8a8">
+   已消费 <b style="color:#fcb66e; margin:0 10px;"> {$team['now_number']}</b>
+   已卖出 <b style="color:#fcb66e;margin:0 10px;">{$team['coupon_number']}</b></li>
+ </ul>
+ </a>
+ </section>
+  <!--{/loop}-->  
+</div>
+
+
+
+
+
+
+
+
+
+</body></html>

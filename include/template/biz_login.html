@@ -1,0 +1,47 @@
+<!--{include biz_html_header}-->
+<div id="bdw" class="bdw">
+<div class="biztop">
+      <div id="bd" class="cf">
+          <h3>{$INI['system']['abbreviation']}团购商家管理中心</h3>
+          
+          <p><a href="/index.php">{$INI['system']['abbreviation']}首页</a></p>
+      </div>
+      
+</div>
+
+
+<div id="bd" class="cf">
+
+
+    <div id="content" class="biz" style="width:920px;border:1px solid #dddddc; margin-top:50px; padding:80px 20px; border-radius:10px;">
+
+          
+            <div style="width:500px; float:left;float:left;">
+                     <h3 style="text-align:center; line-height:40px;color:#2eb8ab;font-size:28px;">商户登陆</h3> 
+                    <form id="biz-user-form" method="post" action="/biz/login.php" class="validator">
+                        <div class="field" style="margin-top:20px;">
+                            <label for="biz-login">登录名</label>
+                            <input type="text" size="30" name="username" id="biz-username" class="f-input" datatype="require" require="true" />
+                        </div>
+                        <div class="field" style="margin-top:20px;">
+                            <label for="biz-password">密码</label>
+                            <input type="password" size="30" name="password" id="biz-password" class="f-input" datatype="require" require="true" />
+                        </div>
+                        <div class="act">
+                            <input type="submit" value="登录" name="commit" id="login-submit" class="formbutton"/>
+                        </div>
+                    </form>
+          
+        </div>
+        
+        <div class="box-content_img">
+             <h3>随时随地验证{$INI['system']['abbreviation']}券</h3>
+             <p><img src="/static/0750/images/code_img.png" /></p>
+        </div>
+    </div>
+
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include biz_footer}-->
+

@@ -1,0 +1,19 @@
+﻿/* .Dialog{width:100%; height:100%; position:absolute; z-index:21; top:0; left:0; background-color:transparent; display:none;}
+.Dialog .pos ,.Dialog .pos_bg{width:500px; height:416px; position:absolute; z-index:23; left:50%; top:50%;}*/
+.Dialog{width:500px; height:416px; position:absolute; z-index:23; left:50%; top:50%;display:none;background:#fff;}
+.Dialog .pos{margin:-208px 0 0 -250px; background:#fff; font-size:13px;}
+.Dialog .pos_bg{border:10px solid #000; -moz-opacity:.2; -webkit-opacity:.2; opacity:.2; filter:alpha(opacity=20); z-index:22; margin:-218px 0 0 -260px;}
+.Dialog .mask{width:100%; height:100%; position:absolute; z-index:21; top:0; left:0; -moz-opacity:.2; -webkit-opacity:.2; opacity:.2; filter:alpha(opacity=20); background-color:#000;}
+.Dialog .t{text-align:center; font-size:14px; background:#f7f7f7; overflow:hidden; display:block; padding:10px; height:48px; -moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset; -webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset; box-shadow:0 1px 0 rgba(255,255,255,.3) inset; color:#333; font-weight:bold;}.Dialog .t img{vertical-align:middle; margin-right:10px; display:inline;}
+.Dialog .set{padding:15px 10px;}
+.Dialog .setted ,.Dialog .setting{padding:0 10px;}
+.Dialog ul.option{padding:10px 10px 15px 10px;}
+.Dialog ul.option li{float:left; display:inline; margin:0 10px 10px 0; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.Dialog ul.option li a{float:left; padding:5px 15px; text-shadow:1px 1px #fff; background-color:#f0f0f0; border:1px solid #ddd; color:#333;}
+.Dialog ul.option li a:hover{background-color:#e9e9e9;}
+.Dialog ul.option li a.active{background-color:#2aa143; border-color:#1f9537; color:#fff; text-shadow:none;}
+.Dialog ul.option li a.active:hover{background-color:#1f9537;}
+.Dialog .btn{text-align:center; overflow:visible; position:absolute; left:0; bottom:25px; width:100%; z-index:23;}
+.Dialog .btn a{padding:5px 25px; -moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset; -webkit-box-shadow:0 1px 0 rgba(255,255,255,.3) inset; box-shadow:0 1px 0 rgba(255,255,255,.3) inset; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; font-size:14px; display:inline;}
+.Dialog .btn a.ok{background-color:#2aa143; border:1px solid #1f9537; margin-right:25px; color:#fff;}
+.Dialog .btn a.close{background-color:#f0f0f0; border:1px solid #ddd; color:#333;}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/jquery-1.9.1.min.js"></script>
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+
+</head>
+
+
+
+
+
+<body mon="position=index">
+
+<!--{include mb_header}-->
+
+
+<section class="widget-index-catg clearfix" mon="type=catg">
+<div class="wrap wrap8 clearfix">
+
+ <form id="biz-user-form" method="post" action="/wapbiz/validation.php" class="validator">
+<input type="text" name="coupon" id="coupon" class="coupon" value=""  placeholder="{$notice}">
+</div>
+
+<div class="wrap wrap8 clearfix" id="item"  style="background:#63584a">
+
+<a class="item" title="1">
+1
+</a>
+<a class="item" title="2">
+2
+</a>
+<a class="item" title="3">
+3
+</a>
+<a class="item" title="4">
+4
+</a>
+<a class="item " title="5">
+5
+</a>
+<a class="item" title="6">
+6
+</a>
+<a class="item" title="7">
+7
+</a>
+<a class="item" title="8">
+8
+</a>
+<a class="item" title="9">
+9
+</a>
+<a class="item" title="0">
+0
+</a>
+<a class="item_1">
+×
+</a>
+
+<input type="submit" class="item_2" value="验证">
+</form>
+</div>
+</section>
+
+
+<!--{include mb_footer}-->
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+$("#item").children(".item").click(function(){
+	
+	var num = $("#coupon").val() + $(this).attr("title");
+	
+	//num.replace(/^(\s|\u00A0)+/,'').replace(/(\s|\u00A0)+$/,'');  
+	
+   $("#coupon").val(num);	
+});
+
+$(".item_1").click(function(){
+	
+	var num = $("#coupon").val();
+	val = num.substring(0,num.length-1);
+    $("#coupon").val(val);	
+});
+
+
+</script>

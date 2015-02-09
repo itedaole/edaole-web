@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/jquery-1.9.1.min.js"></script>
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+
+</head>
+
+
+
+
+
+<body mon="position=index">
+
+
+
+<div id="j-goods-container">
+
+
+<!--{loop $comment_list $index $one}-->
+
+   <section class="w-goods " mon="action=click&type=item">
+<a id="0" class="clearfix" name="0" href="comment_info.php?partner_id={$partner_id}&id={$one['id']}">
+     <div class="img-wrapper" style="border:none;">
+        <span class="fen">{$one['fen']}</span>
+        <span>分</span> 
+    </div>
+        <ul>
+      <li class="title">
+  
+  <span class="item-name">{$one['title']}</span></li>       
+
+<li class="others">
+<ins>1</ins>
+<span class="slash"></span>
+<span class="old-price">${date('Y-m-d',$one['begin_time'])}</span>
+</li>
+
+<li class="info"><span>{$one['num']}条评论</span></li>
+        </ul>
+ 
+</a>
+</section>
+<!--{/loop}-->
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
+
+
+</script>

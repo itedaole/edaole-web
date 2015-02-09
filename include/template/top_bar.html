@@ -1,0 +1,166 @@
+<div class="topbar">
+  <div class="inside">
+		<div class="leftbar">
+			<ul>
+				<!-- <li class="mobile"><a href="/app_download.php" target="_blank">下载{$INI['system']['abbreviation']}手机版</a>
+			      <div class="showmenu" style="display: none;">
+			       <div class="version">
+			        <div class="c c2"><img src="/static/0750/images/code.gif"></div>
+			        <div class="c ct"><a href="/app_download.php" target="_blank">下载安卓版</a></div>
+			        <div class="c ct"><a href="/app_download.php" target="_blank">下载苹果版</a></div>
+			       </div>
+			      </div>
+			     </li> -->
+				<li><a href="/city.php">{$city['name']}</a></li>
+				<li class="yline">
+					<!--{loop $area $index $one}--> <a 
+					href="/category.php?aid={$one['id']}"
+					class="<!--{if $aid}-->focus<!--{/if}--> top-area-text">{$one['name']}</a> <!--{/loop}-->
+				</li>
+			</ul>
+		</div>
+		<div class="rightbar">
+    		<ul>
+		    <!--{if $login_user}-->
+		            
+		            <li class="user"><span title="GPYgNQrqHz"><!--{if $_SESSION['ali_token']}-->
+						${mb_strimwidth($login_user['realname'],0,10)}！
+		                <!--{else}-->
+						${mb_strimwidth($login_user['username'],0,10)}！
+						<!--{/if}--></span><a class="exit" href="/account/logout.php">注销</a></li>
+				     <li class="member"><a href="javascript:;" class="dot">我的{$INI['system']['abbreviation']}</a>
+				      <div class="showmenu" style="display: none;">
+				              <a href="/coupon/index.php">我的优惠码</a>
+				       <a href="/account/comment.php">我的评价</a>
+				       <a href="/account/collect.php">我的收藏</a>
+				       <a href="/credit/index.php">账户余额</a>
+				       <a href="/credit/charge.php">账户充值</a>
+				       <a href="/account/settings.php">账户设置</a>
+				            </div>
+				     </li>
+				     
+				
+				     <li class="diy"><a href="/account/collect.php" class="dot">我的收藏</a>
+				     
+				<!--${
+				$collect_list = DB::LimitQuery('collect', array(
+					'condition' => array('user_id'=>$_SESSION[user_id]),
+					'order' => 'ORDER BY team_id DESC, id ASC',
+					'size' => 8,
+				));
+				
+				}--> 
+		 
+		      <div class="showmenu myco" style="display: none;">
+      
+                     
+                       <!--{if $collect_list}-->
+                       <!--{loop $collect_list $tindex $one}-->  
+                         <div class="mc">
+                                <div class="pi">
+                                <a target="_blank" href="/team.php?id={$one['team_id']}">
+                                <img width="65" height="41" src="${team_image($one['image'])}">
+                                </a>
+                                </div>
+                                <div class="ti">
+                                <a target="_blank" href="/team.php?id={$one['team_id']}">
+                                   {$one['title']}
+                                </a>
+                                </div>
+                                <div class="pr">
+                                <b class="fee">{$currency}${moneyit($one['team_price'])}</b>
+                                </div>
+                            </div>
+                     
+                   <!--{/loop}-->  
+                
+                          <div class="mc mcmore">
+                               <a target="_blank" href="/account/collect.php">查看更多我收藏的</a>
+                            </div>
+          <!--{else}-->
+                             <div class="mc mcmore">
+                             尚未有收藏记录，<a href="/index.php">去逛逛</a>
+                            </div>
+                            
+                             <!--{/if}-->
+            </div>
+     </li>
+     
+            
+            
+            
+            
+		<!--{else}-->
+        
+        
+          <li class="user"><a class="orange" href="/account/login.php">登录</a>|<a href="/account/signup.php">注册</a></li>
+     <li class="member"><a class="dot" href="javascript:;">我的{$INI['system']['abbreviation']}</a>
+      <div class="showmenu" style="display: none;">
+              <!-- 未登录显示 -->
+       <a class="orange" href="/account/login.php">亲，请先登录</a>
+       <!-- //-->
+             </div>
+     </li>
+     <li class="diy"><a class="dot" href="javascript:;">我的收藏</a>
+      <div class="showmenu myco" style="display: none;">
+              <div class="mc mcmore"><a class="orange" href="/account/login.php">亲，请先登录</a></div>
+              </div>
+     </li>
+        
+        
+                  
+            
+            
+            
+		<!--{/if}-->
+        
+        
+        
+     <!-- <li class="diy"><a class="dot" href="/cart/index.php">购物车</a>
+${
+$p_teams = get_cart_team();
+} 
+ 
+      <div class="showmenu myco" style="display: none;">
+      
+                     
+                       {if $p_teams}
+                         {loop $p_teams $p_id $p}
+              {loop $p['teams'] $index $one} 
+                         <div class="mc">
+                                <div class="pi">
+                                <a target="_blank" href="/team.php?id={$one['team_id']}">
+                                <img width="65" height="41" src="${team_image($one['image'])}">
+                                </a>
+                                </div>
+                                <div class="ti">
+                                <a target="_blank" href="/team.php?id={$one['team_id']}">
+                                   {$one['title']}
+                                </a>
+                                </div>
+                                <div class="pr">
+                                <b class="fee">{$currency}${moneyit($one['team_price'])}</b>
+                                </div>
+                            </div>
+                      {/loop}  
+                   {/loop}  
+                
+                          <div class="mc mcmore">
+                               <a target="_blank" href="/cart/index.php">查看购物车</a>
+                            </div>
+          {else}
+                             <div class="mc mcmore">
+                             <a href="/index.php">你的购物车是空的，去逛逛</a>
+                            </div>
+                            
+                             {/if}
+            </div>
+     </li>  
+
+     <li class="supplier"><a href="/biz" target="_blank" class="dot">我是商家</a> </li> -->
+     
+    </ul>
+    
+   </div>
+  </div>
+ </div>

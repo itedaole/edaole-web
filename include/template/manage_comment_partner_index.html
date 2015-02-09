@@ -1,0 +1,44 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<!--{include manage_left_menu}-->
+<div class="right_main">
+<div id="bd" class="cf">
+<div id="coupons">
+
+    <div id="content" class="coupons-box clear mainwide">
+		<div class="box clear">
+            
+            <div class="box-content">
+                <div class="head">
+                    <h2>全部标签</h2>All tags
+                    <ul class="filter">
+                       <li><a href="comment_partner_edit.php#mm">添加</a></li>
+                    </ul>
+				</div>
+                <div class="sect">
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+					<tr><th width="100">ID</th><th width="250">名称</th><th width="160">操作</th></tr>
+					<!--{loop $comment_partner $index $one}-->
+					<tr ${$index%2?'':'class="alt"'} id="team-list-id-{$one['id']}">
+						<td>{$one['id']}</a></td>
+						<td>
+							{$one['name']}
+						</td>
+	
+						<td class="op" nowrap><a href="/manage/comment/comment_partner_edit.php?id={$one['id']}">编辑</a>｜<a href="/ajax/manage.php?action=comment_partner_remove&id={$one['id']}" class="ajaxlink" ask="确定删除本条新闻吗？" >删除</a></td>
+					</tr>
+					<!--{/loop}-->
+					<tr><td colspan="7">{$pagestring}</tr>
+                    </table>
+				</div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->

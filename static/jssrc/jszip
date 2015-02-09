@@ -1,0 +1,25 @@
+#!/bin/csh
+echo -n > index_no.js
+cat jquery-1.3.2.js  >> index_no.js
+cat jquery.validator.js  >> index_no.js
+cat jquery.timers.js  >> index_no.js
+cat jquery.form.js >> index_no.js
+cat jquery.pngFix.js >> index_no.js
+cat application.js >> index_no.js
+cat swfobject.js >> index_no.js
+cat md5.js >> index_no.js
+php php/example-file.php index_no.js index_no.js
+
+echo -n > index.js
+cat jquery-1.3.2.js  >> index.js
+cat jquery.validator.js  >> index.js
+cat jquery.timers.js  >> index.js
+cat jquery.form.js >> index.js
+cat jquery.pngFix.js >> index_no.js
+cat application.js >> index.js
+cat customize.js >> index.js
+cat swfobject.js >> index.js
+cat md5.js >> index.js
+
+php php/example-file.php index.js index.js
+cp index.js ../js/index.js

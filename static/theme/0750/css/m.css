@@ -1,0 +1,71 @@
+﻿@charset "utf-8";
+/* website    : 0750团购网 0750.tuanzhang.cc
+   author     : 林嘉文 Gavin Lin
+   creatTime  : 04.21 2014
+   saveFrom   : ip-42.121.84.115
+   @face-color: #fff
+   @face-style: app动画
+ */
+.part1.active .phone{animation:phone1 1s; -webkit-animation:phone2 1s;}
+@keyframes phone1
+{
+0%  {top:800px; opacity:0;}
+100%{opacity:1;}
+}
+@-webkit-keyframes phone2
+{
+0%  {top:800px; opacity:0;}
+100%{opacity:1;}
+}
+.part1.active .cloud_1{animation:cloud1 5s linear infinite; -webkit-animation:cloud1 5s linear infinite;}
+@keyframes cloud1
+{
+0%  {opacity:0;}
+25% {left:550px; opacity:.75;}
+50% {left:600px; opacity:.35;}
+75% {left:650px; opacity:1;}
+100%{left:700px; opacity:0;}
+}
+@-webkit-keyframes cloud1
+{
+0%  {opacity:0;}
+25% {left:550px; opacity:.75;}
+50% {left:600px; opacity:.35;}
+75% {left:650px; opacity:1;}
+100%{left:700px; opacity:0;}
+}
+.part1.active .cloud_2{animation:cloud2 3s linear infinite; -webkit-animation:cloud2 3s linear infinite;}
+@keyframes cloud2
+{
+0%  {opacity:0;}
+50% {opacity:1;}
+100%{left:550px; opacity:0;}
+}
+@-webkit-keyframes cloud2
+{
+0%  {opacity:0;}
+50% {opacity:1;}
+100%{left:550px; opacity:0;}
+}
+.part2.active .phone ,.part3.active .phone ,.part4.active .phone{animation:phone2 1s; -webkit-animation:phone2 1s;}
+@keyframes phone2
+{
+0%  {top:800px; opacity:0;}
+100%{opacity:1;}
+}
+@-webkit-keyframes phone2
+{
+0%  {top:800px; opacity:0;}
+100%{opacity:1;}
+}
+.part.active .font ,.part.active .code{animation:move1 1s; -webkit-animation:move1 1s;}
+@keyframes move1
+{
+0%  {left:1100px; opacity:0;}
+100%{opacity:1;}
+}
+@-webkit-keyframes move1
+{
+0%  {left:1100px; opacity:0;}
+100%{opacity:1;}
+}

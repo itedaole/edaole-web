@@ -1,0 +1,112 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<!--{include manage_left_menu}-->
+<div class="right_main">
+<div id="bd" class="cf">
+
+<div id="help">
+    <style>.sect table td{padding:5px;}</style>
+    <div id="content" class="coupons-box clear mainwide">
+		<div class="box clear">
+            <div class="box-content">
+                <div class="head">
+                    <h2> 
+					    最土软件升级版(${SYS_VERSION}_${SYS_SUBVERSION})
+					    [<a href="/manage/misc/add_database.php">升级数据库结构</a>]
+					</h2>
+				</div>
+				<div class="sect">
+					<!--{if is_manager(1)}-->
+					<div class="wholetip clear"><h3>周数据报表 Week Data Report</h3></div>
+                    <div style="margin:10px 20px;"><strong>[{$thisday}]</strong></div>
+                    <div style="margin:20px;">
+                    <table style="width:100%;" cellpadding="5" cellspacing="0" border="1" bordercolor="#89B4D6">
+                    <tr valign="middle">
+                        <td></td>
+                        <td>周日<br />{$week[0]}</td>
+                        <td>周一<br />{$week[1]}</td>
+                        <td>周二<br />{$week[2]}</td>
+                        <td>周三<br />{$week[3]}</td>
+                        <td>周四<br />{$week[4]}</td>
+                        <td>周五<br />{$week[5]}</td>
+                        <td>周六<br />{$week[6]}</td>
+                        <td>合计</td>
+                    </tr>
+                    <tr>
+                        <td>注册用户</td>
+                        <!--{loop $week $one}--><td>${strval($weekuser[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekuser))}</td>
+                    </tr>
+                    <tr>
+                        <td>在线项目</td>
+                        <!--{loop $week $one}--><td>${strval($weekteamonline[$one])}</td><!--{/loop}-->
+                        <td>-----</td>
+                    </tr>
+                    <tr>
+                        <td>新上项目</td>
+                        <!--{loop $week $one}--><td>${strval($weekteamnew[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekteamnew))}</td>
+                    </tr>
+                    <tr>
+                        <td>付款订单</td>
+                        <!--{loop $week $one}--><td>${strval($weekorderpay[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekorderpay))}</td>
+                    </tr>
+                    <tr>
+                        <td>实际销售</td>
+                        <!--{loop $week $one}--><td>${strval($weekorderpayorigin[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekorderpayorigin))}</td>
+                    </tr>
+                    <tr>
+                        <td>余额销售</td>
+                        <!--{loop $week $one}--><td>${strval($weekorderpaycredit[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekorderpaycredit))}</td>
+                    </tr>
+                    <tr>
+                        <td>付款销售</td>
+                        <!--{loop $week $one}--><td>${strval($weekorderpaymoney[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekorderpaymoney))}</td>
+                    </tr>
+                    <tr>
+                        <td>未付订单</td>
+                        <!--{loop $week $one}--><td>${strval($weekorderunpay[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekorderunpay))}</td>
+                    </tr>
+                    <tr>
+                        <td>在线充值</td>
+                        <!--{loop $week $one}--><td>${strval($weekflowcharge[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekflowcharge))}</td>
+                    </tr>
+                    <tr>
+                        <td>线下充值</td>
+                        <!--{loop $week $one}--><td>${strval($weekflowstore[$one])}</td><!--{/loop}-->
+                        <td>${sum(array_values($weekflowstore))}</td>
+                    </tr>
+                    </table>
+                    </div>
+                    <div style="margin:10px 20px;text-align:right;"><a href="index.php?page=${$page+1}">&lt;&lt;上一周</a><!--{if $page>0}-->&nbsp;&nbsp;<a href="index.php?page={$page-1}">下一周&gt;&gt;</a><!--{else}-->&nbsp;&nbsp;下一周&gt;&gt;<!--{/if}--></div>
+					<!--{/if}-->
+					<div class="wholetip clear"><h3>全站统计表</h3></div>
+					<div style="margin:0 20px;">
+						<p>团购项目数：{$team_count}</p>
+						<p>用户注册数：{$user_count}</p>
+						<p>团购订单数：{$order_count}</p>
+						<p>邮件订阅数：{$subscribe_count}</p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+</div> <!-- bd end -->
+</div>
+</div> <!-- bdw end -->
+
+
+
+
+
+<!--{include manage_footer}-->
+
+  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="style/jquery-1.9.1.min.js"></script>
+<script src="style/wpo_alog_speed.js" async></script>
+<script src="style/alog.js"></script>
+<title>{$INI['system']['abbreviation']}</title>
+
+<link rel="stylesheet" type="text/css" href="style/list_css_0_6f15796.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_0_6c6ef1d.css">
+<link rel="stylesheet" type="text/css" href="style/common_css_1_ad94b5d.css">
+
+</head>
+
+
+
+
+
+<body mon="position=index">
+
+
+
+<article class="p-index" mon="action=click" id="j-index">
+
+
+<div id="j-goods-container">
+
+
+<!--{loop $teams $team}-->
+    <!--{if $team}-->
+   
+        
+
+<section class="w-goods " mon="action=click&amp;type=item">
+ <a href="/wap/team.php?id={$team['id']}" mon="query=&amp;page_catg=0&amp;nuomi_order=0&amp;content=item0&amp;dealTinyUrl=swdbwplc&amp;deal_id=964894&amp;nuomi_index=0&amp;pageindex=0" class="clearfix" name="0" id="0">
+ <div class="img-wrapper" style="width:120px;height:80px;">
+ <span class="tag-free-reservation"></span>
+ <img style="visibility: visible;" src="${team_image($team['image'], true)}" height="79" width="118">
+ </div>
+ <ul>
+ <li class="title"><span class="store "></span>
+ <span class="item-name">{$team['title']}</span>
+ </li>
+ <li class="info">{$team['summary']}</li>
+ <li class="others"><ins>${moneyit($team['team_price'])}</ins><span class="slash">/</span>
+ <del class="old-price">{$currency}${moneyit($team['market_price'])}</del>
+ <span class="bought">{$team['now_number']}</span>
+ </li>
+ </ul>
+ </a>
+ </section>
+    
+    <!--{/if}--> 
+<!--{/loop}-->
+
+</div>
+
+
+</article>
+
+
+
+</body>
+
+</html>

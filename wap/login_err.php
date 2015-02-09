@@ -1,0 +1,1 @@
+{'singer':{'userid':'','stat':'login err'}} 
