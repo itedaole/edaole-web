@@ -37,7 +37,7 @@ article.content{width:100%;}
 .part2{background-image:url(img/bg2.jpg);}
 .part3{background-image:url(img/bg3.jpg);}
 .part4{background-image:url(img/bg4.jpg);}
-.part .inside{width:1100px; position:relative; z-index:1; height:736px;}
+.part .inside{width:1200px; position:relative; z-index:1; height:736px;}
 .part .movie{position:absolute; z-index:1;}
 .part .phone{background:url(img/phone.png) no-repeat;}
 .part .code{width:196px;}
@@ -48,8 +48,9 @@ article.content{width:100%;}
 .part .font ,.part .exfont{color:#fff; white-space:nowrap;}
 .part .exfont{text-align:center;}
 .part .exfont p{margin-top:5px; letter-spacing:1px;}
+.code .android-new{display:block;background:url(img/edaole_android_big_code.png) no-repeat;background-size:cover;width:193px;height:193px;}
 
-.part1 .phone{background-position:-30px -40px; width:284px; height:445px; top:140px; left:237px;}
+.part1 .phone{background-position:-30px -21px; width:284px; height:477px; top:130px; left:237px;}
 .part1 .font ,.part1 .exfont{text-shadow:0 0 5px rgba(31,107,69,.75);}
 .part1 .font{top:185px; left:645px;}
 .part .font p{margin-top:5px;}
@@ -152,3 +153,25 @@ body .onepage-wrapper .ops-section{height:100% !important;}
 .killie6 .part2 .exfont ,.killie6 .part3 .exfont ,.killie6 .part4 .exfont{left:50%; margin-left:-126px; right:auto;}
 .killie6 dialog.panel{position:absolute;}
 .killie6 .mask{position:absolute;}
+
+/* 通用页脚部分 footer */
+.footer{padding:10px 0;}
+.footer .inside{width:1100px; overflow:visible; display:table; text-align:center;}
+.footer .part{margin:0 60px; display:inline-block; overflow:visible; text-align:left;}
+.footer .part ul li{color:#727272; line-height:2;}
+.footer .part ul.list li{font-weight:bold;}
+.footer .part ul.list li.t{font-size:15px; color:#6c6c6c;}
+.footer .part ul.list li a{margin-left:5px; color:#727272; font-weight:normal;}
+.footer .part ul.list li a:hover{border-bottom:1px solid #727272; color:#525252;}
+.footer .part .code{width:101px; height:138px; margin-top:-18px; overflow:visible;}
+.footer .part .weibo{width:130px; height:22px; font-size:15px; color:#525252; margin-top:13px;}
+.footer .part .weibo *{display:inline; float:left;}
+.footer .part .weibo a{background:url(img/weibo.jpg) no-repeat; width:37px; height:22px; font-size:12px; padding-left:25px; line-height:22px; margin-left:8px;}.footer .part .weibo a:hover{background-position:-62px 0; color:#fff;}
+.footer .dd{margin-top:18px;}
+.footer .dd .s{width:285px;}
+.footer .dd .s a{display:inline; float:left; margin:0 20px;}
+.footer .dd .s a.suggest{background:url(img/i8.gif) left center no-repeat; padding-left:25px; height:34px; color:#525252; width:60px; text-align:center;}
+.footer .dd .s a.apple{background:url(img/i9.gif) 0 0 no-repeat; text-indent:-9999px; width:25px; height:29px;}
+.footer .dd .s a.adr{background:url(img/i9.gif) -28px 0 no-repeat; text-indent:-9999px; width:23px; height:29px;}
+.footer .copyright *{text-align:center; color:#ccc;}
+.footer ul.footer_link  li{display:inline; padding:0 10px;}

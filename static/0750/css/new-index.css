@@ -95,9 +95,9 @@
 /*search box in big image**/
 .banner-text-area{left: 0; padding-bottom: 30px; padding-top: 30px; position: relative; right: 0;text-align:center;top:20px;}
 .banner-text{font-size:37px;width:683px;color:#ffffff;word-break:normal;text-shadow: -1px 2px 3px #000000; }
-.banner-search-area { background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; left: 0; padding-bottom: 30px; padding-top: 30px; position: absolute; right: 0; }
+.banner-search-area { background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8); bottom: 0; left: 0; padding-bottom: 30px; padding-top: 30px; position: absolute; right: 0; }
 .banner-search-box { float: left; width: 100%;}
-.search-form-input-wrapper { display: inline-block; position: relative; width:520px}
+.search-form-input-wrapper { display: inline-block; position: relative; width:800px}
 .keywords-wrapper { display: inline-block; position: relative; float:left;border-right:0;}
 .text-center{text-align:center;}
 #banner_keywords{width:290px;}
@@ -108,7 +108,7 @@
     padding: 8px 10px;
     width: 100%;
 }
-.select-box select{font-size: 18px;height:40px;width:348px;line-height:40px;-webkit-appearance: menulist-button;}
+.select-box select{font-size: 18px;height:40px;width:680px;line-height:40px;-webkit-appearance: menulist-button;}
 .select-box select option{font-size: 18px;height:40px;padding-top:10px;}
 .submit-btn{float:left;}
 .submit-btn input{height:40px;width:100px;background-color: #ff6e03; border:0; color: #fff;font-size:16px;}

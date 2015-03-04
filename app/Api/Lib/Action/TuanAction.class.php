@@ -406,7 +406,7 @@ function buy(){
 			$returnData['couponcode'] = $tuan->createCouponcode($user_id);
 		}
 		$returnData['share_summary']=$team['share_summary'];
-		$returnData['share_url'] = 'http://www.edaole.com/team.php?id='.$team['id'];
+		$returnData['share_url'] = 'http://www.edaole.com/wap/team.php?id='.$team['id'];
 		$res['status'] = 1;
 		$res['result'] = $returnData;
 		$this->ajaxReturn($res,'JSON');
